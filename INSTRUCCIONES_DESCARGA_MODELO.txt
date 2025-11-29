@@ -1,0 +1,91 @@
+# Instrucciones para Descargar y Configurar el Modelo BERT de TYR
+
+## Paso 1: Descargar el Modelo
+
+El modelo BERT entrenado (421MB) no está incluido en el repositorio de GitHub debido a su tamaño.
+
+**Descarga el modelo desde Google Drive:**
+[AQUÍ VAS A PONER TU LINK DE GOOGLE DRIVE]
+
+Archivo: `modelo_bert_tyr_10_clases_COMPLETO.zip` (421MB)
+
+## Paso 2: Descomprimir el Modelo
+
+1. Descarga el archivo ZIP
+2. Colócalo en la carpeta raíz del proyecto TYR
+3. Descomprímelo:
+
+**Windows:**
+- Clic derecho → "Extraer aquí"
+- O usa: `unzip modelo_bert_tyr_10_clases_COMPLETO.zip`
+
+**Linux/Mac:**
+```bash
+cd TYR/
+unzip modelo_bert_tyr_10_clases_COMPLETO.zip
+```
+
+## Paso 3: Verificar la Estructura
+
+Después de descomprimir, deberías tener:
+
+```
+TYR/
+├── modelo_bert_tyr_10_clases_COMPLETO/
+│   ├── model.safetensors (420MB)
+│   ├── config.json
+│   ├── tokenizer.json
+│   ├── vocab.txt
+│   ├── tokenizer_config.json
+│   ├── special_tokens_map.json
+│   └── label_map.json
+├── backend/
+├── Figma/
+├── ... (otros archivos del proyecto)
+```
+
+## Paso 4: Ejecutar el Proyecto
+
+Ahora puedes ejecutar TYR con el modelo BERT completo:
+
+**Backend (con modelo):**
+```bash
+cd backend
+pip install -r requirements.txt
+python main.py
+```
+
+**Frontend:**
+```bash
+cd Figma
+npm install
+npm run dev
+```
+
+## Alternativa: Modo Demo Sin Modelo
+
+Si prefieres probar TYR sin descargar el modelo (421MB), puedes ejecutar solo el frontend en "modo demo":
+
+```bash
+cd Figma
+npm install
+npm run dev
+```
+
+El chat usará respuestas inteligentes predefinidas automáticamente.
+
+## Tamaños de Archivos
+
+- Modelo BERT completo: 421MB
+- Repositorio GitHub (sin modelo): ~80MB
+- node_modules (después de npm install): ~300MB
+
+## Soporte
+
+Si tienes problemas con la descarga o instalación:
+- Abre un issue en: https://github.com/EiTinchoZ/TYR/issues
+- Email: mbundy.deltawaves@gmail.com
+
+---
+
+Última actualización: Noviembre 2025

@@ -32,6 +32,8 @@ The assistant handles 9 different intent categories and provides specific respon
 
 ## Quick Start
 
+> **Note:** The BERT model (421MB) is not included in this repository. To use the full AI-powered mode, download it from [Google Drive](#model-download) and follow the [installation instructions](INSTRUCCIONES_DESCARGA_MODELO.txt).
+
 ### Frontend with Demo Mode (Fastest)
 
 Run the modern React interface with intelligent mock responses (no backend required):
@@ -46,6 +48,8 @@ npm run dev
 The chat automatically uses smart pre-defined responses when the backend is unavailable.
 
 ### Full Stack with AI (Recommended)
+
+**Prerequisites:** Download the BERT model first (see [Model Download](#model-download) section below).
 
 Run both backend (BERT model) and frontend for full AI-powered responses:
 
@@ -213,6 +217,44 @@ TYR/
 ├── requirements.txt               # Python dependencies
 └── README.md                      # This file
 ```
+
+---
+
+## Model Download
+
+The trained BERT model (421MB) is required for full AI-powered responses. It's not included in this repository due to size constraints.
+
+### Download Instructions
+
+1. **Download the model from Google Drive:**
+   - [Download modelo_bert_tyr_10_clases_COMPLETO.zip](LINK_GOOGLE_DRIVE_AQUI)
+   - File size: 421MB
+
+2. **Extract to project root:**
+   ```bash
+   # Place the ZIP in the TYR/ directory
+   cd TYR/
+   unzip modelo_bert_tyr_10_clases_COMPLETO.zip
+   ```
+
+3. **Verify the structure:**
+   ```
+   TYR/
+   ├── modelo_bert_tyr_10_clases_COMPLETO/
+   │   ├── model.safetensors (420MB)
+   │   ├── config.json
+   │   ├── tokenizer.json
+   │   └── ... (other files)
+   ```
+
+For detailed instructions, see [INSTRUCCIONES_DESCARGA_MODELO.txt](INSTRUCCIONES_DESCARGA_MODELO.txt).
+
+### Alternative: Demo Mode Without Model
+
+You can use TYR in demo mode without downloading the model:
+- Runs frontend only with intelligent mock responses
+- No backend or model download required
+- Perfect for testing the UI/UX
 
 ---
 
