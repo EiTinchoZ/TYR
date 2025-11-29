@@ -55,6 +55,7 @@ modelo_bert_tyr_10_clases_COMPLETO/
 *.sublime-workspace
 .vs/
 *.code-workspace
+.claude/
 
 # OS
 .DS_Store
