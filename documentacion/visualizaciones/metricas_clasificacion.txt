@@ -1,0 +1,24 @@
+======================================================================
+  REPORTE DE CLASIFICACIÓN - MODELO TYR 4358
+======================================================================
+
+Total de ejemplos evaluados: 500
+Dataset completo: 4,358 ejemplos
+
+                      precision    recall  f1-score   support
+
+becas_financiamiento     1.0000    1.0000    1.0000        15
+  contacto_ubicacion     1.0000    1.0000    1.0000        28
+         faq_general     1.0000    0.9394    0.9688        33
+       fuera_dominio     1.0000    1.0000    1.0000        26
+   horarios_duracion     1.0000    1.0000    1.0000        20
+informacion_carreras     0.9940    1.0000    0.9970       331
+inscripcion_admision     1.0000    1.0000    1.0000        22
+  requisitos_ingreso     1.0000    1.0000    1.0000        20
+    saludo_despedida     1.0000    1.0000    1.0000         5
+
+            accuracy                         0.9960       500
+           macro avg     0.9993    0.9933    0.9962       500
+        weighted avg     0.9960    0.9960    0.9959       500
+
+======================================================================

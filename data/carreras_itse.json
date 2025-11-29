@@ -1,0 +1,350 @@
+{
+  "_metadata": {
+    "version": "1.0",
+    "fecha_actualizacion": "2025-11-23",
+    "total_carreras": 16,
+    "escuelas": [
+      "Innovación Digital",
+      "Tecnología Industrial",
+      "Negocios",
+      "Hospitalidad y Turismo"
+    ],
+    "descripcion": "Base de conocimiento completa de las 16 carreras del ITSE Panamá 2025"
+  },
+  "desarrollo de software": {
+    "nombre": "T.S. en Desarrollo de Software",
+    "escuela": "Innovación Digital",
+    "creditos": 112,
+    "duracion": {
+      "diurna": "2 años 4 meses",
+      "nocturna": "3 años"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Analizar, diseñar, programar e implementar aplicaciones usando Java, Python, C#, JavaScript. Frameworks ágiles (SCRUM, DevOps), bases de datos SQL/NoSQL, IA, cloud computing, IoT.",
+    "campo_ocupacional": [
+      "Desarrollador Full-Stack, Back-end, Front-end",
+      "Programador junior",
+      "Desarrollador de aplicaciones",
+      "Evaluador o tester de software",
+      "Arquitecto de software",
+      "Líder/gestor de proyectos software",
+      "Analista de sistemas",
+      "Consultor tecnológico",
+      "Desarrollador de apps móviles",
+      "Programador web",
+      "Especialista integración y despliegue",
+      "Emprendedor en soluciones tecnológicas"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/ts-en-desarrollo-de-software"
+  },
+  "big data": {
+    "nombre": "T.S. en Big Data y Ciencia de Datos",
+    "escuela": "Innovación Digital",
+    "creditos": 113,
+    "duracion": {
+      "diurna": "2 años 4 meses",
+      "nocturna": "3 años"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Analizar y gestionar grandes volúmenes de datos. Identificar patrones, generar visualizaciones, proponer soluciones basadas en datos para finanzas, salud, marketing, logística.",
+    "campo_ocupacional": [
+      "Científico/a de Datos Junior",
+      "Analista de Datos",
+      "Desarrollador/a de Soluciones Big Data",
+      "Asistente en proyectos ciencia datos",
+      "Técnico/a procesamiento visualización",
+      "Consultor/a Big Data e IA",
+      "Gestor/a bases de datos en nube",
+      "Analista de negocios basado en datos",
+      "Profesional minería de datos"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-big-data"
+  },
+  "ciberseguridad": {
+    "nombre": "T.S. en Ciberseguridad",
+    "escuela": "Innovación Digital",
+    "creditos": 122,
+    "duracion": {
+      "diurna": "2 años 4 meses",
+      "nocturna": "3 años"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Prevenir y detectar amenazas de seguridad. Recuperar incidentes, proteger datos y sistemas. Aplicar normativas, políticas y procedimientos de seguridad informática.",
+    "campo_ocupacional": [
+      "Analista de seguridad informática",
+      "Administrador redes sistemas seguros",
+      "Auditor de ciberseguridad",
+      "Consultor seguridad informática",
+      "Ingeniero de seguridad",
+      "Especialista seguridad información",
+      "Penetration tester",
+      "Investigador forense digital",
+      "Especialista seguridad aplicaciones",
+      "Investigador ciberseguridad",
+      "Docente/formador ciberseguridad",
+      "Emprendedor servicios ciberseguridad"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-ciberseguridad"
+  },
+  "inteligencia artificial": {
+    "nombre": "T.S. en Inteligencia Artificial",
+    "escuela": "Innovación Digital",
+    "creditos": 126,
+    "duracion": {
+      "diurna": "2 años 4 meses",
+      "nocturna": null
+    },
+    "jornadas": ["diurna"],
+    "aprendizaje": "Analizar, diseñar, implementar y gestionar sistemas inteligentes. Desarrollar modelos machine learning, algoritmos IA. Monitorear y optimizar sistemas, análisis datos, soluciones IA éticas.",
+    "campo_ocupacional": [
+      "Especialista sistemas inteligentes",
+      "Ingeniero IA junior",
+      "Científico datos especializado IA",
+      "Implementador soluciones IA",
+      "Consultor transformación digital",
+      "Desarrollador aplicaciones inteligentes",
+      "Especialista machine learning"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tsinteligenciaartificial"
+  },
+  "electricidad industrial": {
+    "nombre": "T.S. en Electricidad Industrial",
+    "escuela": "Tecnología Industrial",
+    "creditos": 135,
+    "duracion": {
+      "diurna": "2 años 4 meses",
+      "nocturna": null
+    },
+    "jornadas": ["diurna"],
+    "aprendizaje": "Instalar, mantener y supervisar sistemas eléctricos industriales. Normas seguridad, diagnosticar fallas, interpretar planos, precisión con herramientas.",
+    "campo_ocupacional": [
+      "Área mantenimiento producción industrial",
+      "Plantas distribución generación eléctrica",
+      "Constructoras e inmobiliarias",
+      "Empresas automatización control",
+      "Talleres reparación equipos eléctricos",
+      "Laboratorios pruebas eléctricas",
+      "Profesional independiente"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-electricidad"
+  },
+  "mantenimiento de aeronaves": {
+    "nombre": "T.S. en Mantenimiento de Aeronaves",
+    "escuela": "Tecnología Industrial",
+    "creditos": 139,
+    "duracion": {
+      "diurna": "2 años 8 meses",
+      "nocturna": null
+    },
+    "jornadas": ["diurna"],
+    "aprendizaje": "Inspecciones, mantenimiento preventivo/correctivo. Reparación componentes estructurales, mecánicos, eléctricos. Estándares seguridad internacionales.",
+    "campo_ocupacional": [
+      "Aerolíneas comerciales y carga",
+      "Centros mantenimiento reparación",
+      "Fabricantes aeronaves",
+      "Proveedores de partes",
+      "Aeropuertos servicios navegación",
+      "Aeronáutica Civil",
+      "Empresas arrendamiento aeronaves"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-mantenimiento-de-aeronaves"
+  },
+  "mantenimiento industrial": {
+    "nombre": "T.S. en Mantenimiento Industrial",
+    "escuela": "Tecnología Industrial",
+    "creditos": 137,
+    "duracion": {
+      "diurna": "2 años 4 meses",
+      "nocturna": null
+    },
+    "jornadas": ["diurna"],
+    "aprendizaje": "Identificar fallas, mantenimiento preventivo/correctivo/predictivo. Interpretar planos, herramientas especializadas, normas seguridad.",
+    "campo_ocupacional": [
+      "Industrias manufactureras",
+      "Plantas producción",
+      "Constructoras",
+      "Empresas energéticas",
+      "Mantenimiento mecánico, eléctrico, electromecánico"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-mantenimiento-industrial"
+  },
+  "metalmecánicas": {
+    "nombre": "T.S. en Tecnologías Metalmecánicas",
+    "escuela": "Tecnología Industrial",
+    "creditos": 138,
+    "duracion": {
+      "diurna": "2 años 4 meses",
+      "nocturna": "2 años 4 meses"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Procesos mecanizado, soldadura, montaje, ajuste. Conformado elementos metálicos. Interpretar planos, maquinaria especializada, normas técnicas.",
+    "campo_ocupacional": [
+      "Talleres industriales",
+      "Empresas metalmecánicas",
+      "Constructoras",
+      "Astilleros",
+      "Industrias manufactura mantenimiento"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-metalmecanicas"
+  },
+  "automotriz liviano": {
+    "nombre": "T.S. en Tecnología Automotriz (Vehículos Livianos)",
+    "escuela": "Tecnología Industrial",
+    "creditos": 91,
+    "duracion": {
+      "diurna": "2 años",
+      "nocturna": "2 años 8 meses"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Diagnósticos, reparación en sedanes, camionetas. Sistemas mecánicos, eléctricos, electrónicos. Herramientas escaneo, software especializado.",
+    "campo_ocupacional": [
+      "Industrias automotrices",
+      "Distribuidoras automóviles",
+      "Talleres autorizados",
+      "Talleres aseguradoras",
+      "Empresas inspección técnica",
+      "Técnico automotriz independiente"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-automotriz-liviano"
+  },
+  "automotriz pesado": {
+    "nombre": "T.S. en Tecnología Automotriz (Equipo Pesado)",
+    "escuela": "Tecnología Industrial",
+    "creditos": 87,
+    "duracion": {
+      "diurna": "2 años",
+      "nocturna": "2 años 8 meses"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Mantenimiento vehículos pesados, tractores, equipos. Reparación especificaciones fabricantes. Sistemas mecánicos, eléctricos, electrónicos.",
+    "campo_ocupacional": [
+      "Talleres mantenimiento reparación",
+      "Empresas transporte cargas",
+      "Industria minera, portuaria, construcción",
+      "Empresas alquiler maquinaria",
+      "Concesionarios servicios post-venta",
+      "Emprendimientos mantenimiento"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-tecnologia-automotriz-pesado"
+  },
+  "construcción": {
+    "nombre": "T.S. en Construcción",
+    "escuela": "Tecnología Industrial",
+    "creditos": 94,
+    "duracion": {
+      "diurna": "2 años",
+      "nocturna": "2 años"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Seguridad obra, lectura planos, selección materiales. Cálculo costos, presupuestos, planificación obras. Procesos ejecución, supervisión, control calidad.",
+    "campo_ocupacional": [
+      "Asistente residente obra",
+      "Inspector campo",
+      "Estimador costos",
+      "Asistente planificación",
+      "Dibujante técnico",
+      "Técnico laboratorios materiales"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-construccion"
+  },
+  "gestión ejecutiva": {
+    "nombre": "T.S. en Gestión Ejecutiva Bilingüe",
+    "escuela": "Negocios",
+    "creditos": 91,
+    "duracion": {
+      "diurna": "2 años",
+      "nocturna": "3 años"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Asistencia altos mandos, administración, servicio cliente, contabilidad, RRHH, comercio internacional. Comunicación bilingüe español-inglés.",
+    "campo_ocupacional": [
+      "Asistente ejecutivo bilingüe",
+      "Secretario/a ejecutivo/a",
+      "Coordinador/a administrativo/a",
+      "Asistente gerencia",
+      "Oficinista empresas internacionales",
+      "Asistente ONGs",
+      "Encargado apoyo logístico"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-gestion-ejecutiva"
+  },
+  "operaciones logísticas": {
+    "nombre": "T.S. en Operaciones Logísticas",
+    "escuela": "Negocios",
+    "creditos": 90,
+    "duracion": {
+      "diurna": "2 años",
+      "nocturna": "2 años 8 meses"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Planificar, ejecutar, optimizar procesos logísticos. Transporte, distribución, almacenamiento. Gestión documental internacional, equipos especializados.",
+    "campo_ocupacional": [
+      "Asistente logístico",
+      "Coordinador operaciones",
+      "Supervisor almacén/bodega",
+      "Despachador mercancía",
+      "Analista transporte distribución",
+      "Auxiliar compras suministros",
+      "Gestor inventarios",
+      "Auxiliar agencias aduanales"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-operaciones-logisticas"
+  },
+  "servicios empresariales": {
+    "nombre": "T.S. en Servicios Empresariales",
+    "escuela": "Negocios",
+    "creditos": 91,
+    "duracion": {
+      "diurna": "2 años",
+      "nocturna": "2 años 8 meses"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Contabilidad, administración, RRHH, mercadeo, servicio cliente. Gestionar procesos comerciales, elaborar informes, sistemas gestión integral.",
+    "campo_ocupacional": [
+      "Asistente administrativo",
+      "Gestor operaciones organizacionales",
+      "Auxiliar contable",
+      "Asistente financiero",
+      "Apoyo estudios mercado",
+      "Asistente proyectos empresariales",
+      "Colaborador planes estratégicos"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-servicios-especiales"
+  },
+  "artes culinarias": {
+    "nombre": "T.S. en Artes Culinarias",
+    "escuela": "Hospitalidad y Turismo",
+    "creditos": 91,
+    "duracion": {
+      "diurna": "2 años",
+      "nocturna": "3 años"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Técnicas culinarias profesionales, gastronomía nacional e internacional, gestión de cocina.",
+    "campo_ocupacional": [
+      "Chef profesional",
+      "Cocinero en hoteles y restaurantes",
+      "Gestor de servicios de alimentación",
+      "Emprendedor gastronómico"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica"
+  },
+  "operaciones hoteleras": {
+    "nombre": "T.S. en Operaciones Hoteleras",
+    "escuela": "Hospitalidad y Turismo",
+    "creditos": 93,
+    "duracion": {
+      "diurna": "2 años",
+      "nocturna": "3 años"
+    },
+    "jornadas": ["diurna", "nocturna"],
+    "aprendizaje": "Gestión hotelera, servicio al cliente de excelencia, operaciones de alojamiento, administración turística.",
+    "campo_ocupacional": [
+      "Gestor hotelero",
+      "Coordinador de operaciones hoteleras",
+      "Supervisor de servicios de alojamiento",
+      "Profesional en turismo"
+    ],
+    "enlace": "https://www.itse.ac.pa/oferta-academica"
+  }
+}

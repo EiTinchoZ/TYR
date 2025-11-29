@@ -1,0 +1,86 @@
+name: ✨ Feature Request
+description: Sugiere una nueva característica o mejora para TYR
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por sugerir una mejora para TYR! Completa la información a continuación.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: ¿Cuál es el problema que quieres resolver?
+      description: Una descripción clara del problema o limitación actual
+      placeholder: "Me frustra que no pueda..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe la solución que te gustaría
+      description: Una descripción clara de lo que quieres que suceda
+      placeholder: "Me gustaría que TYR pudiera..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas Consideradas
+      description: Describe otras soluciones o características que hayas considerado
+      placeholder: "He pensado en..."
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Componente
+      description: ¿A qué parte de TYR afectaría esta característica?
+      options:
+        - Backend (API)
+        - Frontend (Landing Page)
+        - App Streamlit
+        - Modelo BERT/ML
+        - Dataset
+        - Documentación
+        - Infraestructura
+        - Otro
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad Sugerida
+      description: ¿Qué tan importante consideras esta característica?
+      options:
+        - 🔥 Crítica - El sistema no es usable sin esto
+        - ⚠️ Alta - Importante para la mayoría de usuarios
+        - 📝 Media - Sería bueno tenerlo
+        - 💡 Baja - Nice to have
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Contexto Adicional
+      description: Screenshots, mockups, o cualquier contexto adicional
+      placeholder: |
+        - Referencias a proyectos similares
+        - Mockups o wireframes
+        - Casos de uso específicos
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: He buscado en los issues existentes y no encontré una solicitud similar
+          required: true
+        - label: Esta característica beneficiaría a múltiples usuarios, no solo a mí
+          required: false
+        - label: Estoy dispuesto a ayudar a implementar esta característica
+          required: false

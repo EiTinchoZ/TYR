@@ -1,0 +1,117 @@
+name: 🐛 Bug Report
+description: Reporta un error o comportamiento inesperado en TYR
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por tomarte el tiempo de reportar un bug. Por favor completa la información a continuación para ayudarnos a resolver el problema.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción del Bug
+      description: Una descripción clara y concisa del bug
+      placeholder: "Cuando hago X, esperaba Y pero ocurrió Z..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Pasos para Reproducir
+      description: ¿Cómo podemos reproducir este comportamiento?
+      placeholder: |
+        1. Ir a '...'
+        2. Hacer click en '...'
+        3. Escribir '...'
+        4. Ver error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamiento Esperado
+      description: ¿Qué esperabas que sucediera?
+      placeholder: Debería mostrar...
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Si aplica, añade screenshots para explicar el problema
+      placeholder: Arrastra y suelta imágenes aquí
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Componente Afectado
+      description: ¿Qué parte de TYR está afectada?
+      options:
+        - Backend (API FastAPI)
+        - Frontend (Landing Page React)
+        - App Streamlit
+        - Modelo BERT
+        - Dataset/Base de Conocimiento
+        - Documentación
+        - Otro
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Sistema Operativo
+      placeholder: "ej. Windows 11, macOS 14.1, Ubuntu 22.04"
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Versión de Python
+      placeholder: "ej. 3.10.5"
+    validations:
+      required: false
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Versión de Node.js (si aplica)
+      placeholder: "ej. 18.16.0"
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: Navegador (si aplica)
+      placeholder: "ej. Chrome 120, Firefox 121, Safari 17"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Contexto Adicional
+      description: Cualquier otra información relevante sobre el problema
+      placeholder: |
+        - Logs de error
+        - Configuración específica
+        - Otros detalles
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: He buscado en los issues existentes y no encontré uno similar
+          required: true
+        - label: Estoy usando la última versión de TYR
+          required: false
+        - label: He leído la documentación relevante
+          required: false

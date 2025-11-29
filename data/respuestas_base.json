@@ -1,0 +1,143 @@
+{
+  "_metadata": {
+    "version": "2.0",
+    "fecha_actualizacion": "2025-11-26",
+    "total_intenciones": 10,
+    "descripcion": "Base de respuestas predefinidas para cada intención del chatbot TYR - Expandida con información institucional completa"
+  },
+  "becas_financiamiento": {
+    "respuesta": "💰 **Becas y Financiamiento en ITSE:**\n\nITSE ofrece varias opciones de ayuda económica:\n\n• **IFARHU-SENACYT**: Becas para carreras tecnológicas\n• **BID (Banco Interamericano de Desarrollo)**: Financiamiento para estudiantes destacados\n• **Alianzas empresariales**: Convenios con empresas del sector tecnológico\n• **Planes de pago**: Opciones flexibles de financiamiento institucional\n\n📞 Para más información sobre becas:\nTeléfono: +507 524-3333\nEmail: becas@itse.ac.pa",
+    "keywords": [
+      "becas",
+      "financiamiento",
+      "ayuda económica",
+      "IFARHU",
+      "BID"
+    ]
+  },
+  "contacto_ubicacion": {
+    "respuesta": "📍 **Contacto e Información ITSE:**\n\n📞 **Teléfono:** +507 524-3333\n📧 **Email:** info@itse.ac.pa\n🌐 **Web:** www.itse.ac.pa\n\n📍 **Ubicación:**\nAvenida Domingo Díaz, Tocumen\nPanamá, República de Panamá\n\n🕐 **Horario de Atención:**\nLunes a Viernes: 8:00 AM - 8:00 PM\nSábados: 8:00 AM - 12:00 PM",
+    "keywords": [
+      "contacto",
+      "teléfono",
+      "email",
+      "ubicación",
+      "dirección"
+    ]
+  },
+  "faq_general": {
+    "respuesta": "❓ **Preguntas Frecuentes sobre ITSE:**\n\n📊 **Datos clave:**\n• Más de 4,000 estudiantes activos\n• 80% inserción laboral de egresados (2025)\n• Metodología 70% práctica, 30% teórica\n• Certificación técnica reconocida nacionalmente\n\n🏆 **Reconocimientos Internacionales:**\n• Foro Económico Mundial: 1 de 8 casos de éxito mundial en ciberseguridad\n• Unión Europea: Caso de éxito en vinculación academia-sector productivo (Global Gateway)\n• Hackathon Internacional de Logística 2025: 1er y 3er lugar\n\n🤝 **Alianzas Estratégicas:**\n• Canal de Panamá - Formación en logística y operaciones\n• Copa Airlines - Especialización en aviación y mantenimiento\n• 15 empresas europeas validan nuestro modelo educativo\n\n🏫 **Servicios Especiales:**\n• CAIPI: Centro de atención integral para hijos/as de estudiantes (guardería, salud, nutrición)\n• CIIECYT: Centro de Investigación e Innovación en Ciencia y Tecnología\n• Laboratorios de tecnología de punta\n• Profesores con experiencia profesional activa\n• Pasantías en empresas líderes del sector\n• Bolsa de trabajo exclusiva para egresados\n\n¿Tienes alguna pregunta específica sobre ITSE?",
+    "keywords": [
+      "información",
+      "datos",
+      "estadísticas",
+      "general",
+      "sobre ITSE",
+      "caipi",
+      "ciiecyt",
+      "reconocimientos",
+      "alianzas",
+      "guardería"
+    ]
+  },
+  "fuera_dominio": {
+    "respuesta": "🤖 **Lo siento, no puedo ayudarte con esa consulta.**\n\nEstoy diseñado específicamente para responder preguntas sobre:\n\n✓ Carreras y programas académicos de ITSE\n✓ Proceso de inscripción y admisión\n✓ Requisitos de ingreso\n✓ Becas y financiamiento\n✓ Horarios y duración de carreras\n✓ Información de contacto y ubicación\n✓ Preguntas generales sobre ITSE\n\nPor favor, reformula tu pregunta relacionada con ITSE o contacta directamente a info@itse.ac.pa para consultas específicas.",
+    "keywords": [
+      "fuera",
+      "otro tema",
+      "no relacionado"
+    ]
+  },
+  "horarios_duracion": {
+    "respuesta": "⏰ **Horarios y Duración de Carreras ITSE:**\n\n**Jornada Diurna:**\n• Duración: 2 años (6 cuatrimestres)\n• Horario: Lunes a Viernes, 8:00 AM - 2:00 PM\n• Modalidad intensiva\n\n**Jornada Nocturna:**\n• Duración: 3 años (9 cuatrimestres)\n• Horario: Lunes a Viernes, 6:00 PM - 10:00 PM\n• Ideal para personas que trabajan\n\n**Sábados (algunas carreras):**\n• Horario: 8:00 AM - 4:00 PM\n• Consultar disponibilidad por carrera\n\n📞 Para horarios específicos de tu carrera de interés: +507 524-3333",
+    "keywords": [
+      "horarios",
+      "duración",
+      "tiempo",
+      "cuánto dura",
+      "jornada"
+    ]
+  },
+  "informacion_carreras": {
+    "respuesta": "🎓 **Carreras Disponibles en ITSE:**\n\n**Escuela de Innovación Digital:**\n• T.S. en Desarrollo de Software\n• T.S. en Big Data y Ciencia de Datos\n• T.S. en Ciberseguridad\n• T.S. en Inteligencia Artificial\n\n**Escuela de Tecnología Industrial:**\n• T.S. en Tecnología Automotriz de Vehículo Liviano\n• T.S. en Construcción\n• T.S. en Electricidad Industrial\n• T.S. en Mantenimiento de Aeronaves\n• T.S. en Mantenimiento Industrial\n• T.S. en Tecnologías Metalmecánicas\n• T.S. en Tecnología Automotriz de Equipo Pesado\n\n**Escuela de Hospitalidad y Turismo:**\n• T.S. en Artes Culinarias\n• T.S. en Operaciones Hoteleras\n\n**Escuela de Negocios:**\n• T.S. en Gestión Ejecutiva Bilingüe\n• T.S. en Operaciones Logísticas\n• T.S. en Servicios Empresariales\n\n📚 Todas las carreras son Técnico Superior (T.S.) con:\n✓ Certificación técnica oficial\n✓ Prácticas empresariales\n✓ Metodología 70% práctica\n\nMás información: https://www.itse.ac.pa/oferta-academica\n\n¿Te interesa alguna carrera en específico?",
+    "keywords": [
+      "carreras",
+      "programas",
+      "técnicas",
+      "estudios",
+      "qué ofrece"
+    ]
+  },
+  "inscripcion_admision": {
+    "respuesta": "📝 **Proceso de Inscripción y Admisión ITSE:**\n\n**Fase 1: Pre-inscripción**\n• Completar formulario en línea: www.itse.ac.pa/inscripcion\n• Subir documentos escaneados\n• Seleccionar carrera de interés\n\n**Fase 2: Evaluación**\n• Prueba PIENSE II (obligatoria)\n• Entrevista personal (algunas carreras)\n• Revisión de expediente académico\n\n**Fase 3: Matrícula**\n• Presentar documentos originales\n• Pago de matrícula\n• Asignación de horario\n• Recibir credencial estudiantil\n\n📅 **Fechas importantes:**\n• Inscripciones: Enero, Mayo, Septiembre\n• Inicio de clases: Febrero, Junio, Octubre\n\n📞 Más información: +507 524-3333 ext. 102",
+    "keywords": [
+      "inscripción",
+      "admisión",
+      "matricula",
+      "aplicar",
+      "proceso"
+    ]
+  },
+  "requisitos_ingreso": {
+    "respuesta": "📄 **Requisitos de Ingreso a ITSE:**\n\n**Documentos Obligatorios:**\n1. Diploma de Bachiller (original y copia)\n2. Certificado de notas de secundaria\n3. Copia de cédula (legible)\n4. 2 fotos tamaño carnet\n5. Certificado de salud\n6. Certificado de buena conducta (Policía Nacional)\n\n**Requisitos Académicos:**\n• Aprobar prueba PIENSE II (mínimo 800 puntos)\n• Promedio mínimo de 2.5 en secundaria\n• Conocimientos básicos de matemáticas y comprensión lectora\n\n**Requisitos Adicionales (según carrera):**\n• Algunas carreras requieren portfolio o prueba específica\n• Carreras técnicas: conocimientos básicos en el área\n\n💡 **Importante:**\nLa prueba PIENSE II se programa durante el proceso de inscripción.\n\n📞 Consultas: +507 524-3333",
+    "keywords": [
+      "requisitos",
+      "documentos",
+      "necesito",
+      "PIENSE",
+      "diploma"
+    ]
+  },
+  "saludo_despedida": {
+    "respuesta": "👋 ¡Hola! Soy TYR, el asistente virtual de ITSE.\n\nEstoy aquí para ayudarte con información sobre:\n• Carreras y programas académicos\n• Proceso de inscripción\n• Becas y financiamiento\n• Horarios y contacto\n\n¿En qué puedo ayudarte hoy? 😊",
+    "keywords": [
+      "hola",
+      "saludos",
+      "buenos días",
+      "gracias",
+      "adiós"
+    ]
+  },
+  "informacion_institucional": {
+    "respuesta": "🏛️ **Información Institucional del ITSE:**\n\n📜 **Historia y Creación:**\n• Creado por Ley 71 del 8 de noviembre de 2017\n• Inauguración oficial: 15 de abril de 2019\n• Estudiantes iniciales: 154 → Matrícula actual: ~4,000 estudiantes\n• Capacidad total: 5,000 estudiantes\n\n🎯 **Misión:**\nGarantizar una educación integral de excelencia que forme profesionales con liderazgo, competencias sólidas, vocación de transformación social y valores alineados con el desarrollo sostenible de Panamá.\n\n🔭 **Visión:**\nSer la institución de educación superior especializada de referencia en Panamá por su excelencia académica, formando profesionales con conocimiento práctico, experiencia y compromiso con los Objetivos de Desarrollo Sostenible (ODS).\n\n🌍 **Modelo Educativo Internacional:**\n• Infraestructura inspirada en el Institute of Technical Education de Singapur\n• Malla curricular desarrollada por People First del Reino Unido\n• Laboratorios vivenciales basados en Alemania y Singapur\n• Metodología: 60% formación académica + 40% práctica\n• Filosofía: \"Aprender haciendo con ética y valores\"\n\n🏫 **4 Escuelas Especializadas:**\n1. **Escuela de Innovación Digital** (2022) - Financiada por CAF y BID, con colaboración de Columbia University y MIT. Más de 800 estudiantes, 50%+ mujeres\n2. **Escuela de Tecnología Industrial** (2018) - Orientada a sectores estratégicos industriales de Panamá\n3. **Escuela de Hospitalidad y Turismo** - Servicios de alto nivel en sector turismo\n4. **Escuela de Negocios** - Herramientas para crecimiento económico\n\n🏆 **Reconocimientos Internacionales 2025:**\n• **Foro Económico Mundial**: 1 de 8 casos de éxito mundial en formación de talento en ciberseguridad\n• **Unión Europea**: Caso de éxito en vinculación academia-sector productivo (Global Gateway)\n• **Hackatón Internacional de Logística**: Campeón 3 años consecutivos (2023-2025)\n\n🤝 **Alianzas Estratégicas:**\n• Autoridad del Canal de Panamá (ACP) - Carreras industriales\n• Copa Airlines - Mantenimiento de aeronaves\n• TEC de Monterrey (México) - Metodologías educativas\n• ICIL Instituto de Logística (España)\n• Columbia University y MIT (EEUU)\n• People First (Reino Unido)\n• Institute of Technical Education (Singapur)\n\n📊 **Empleabilidad (2025):**\n• 80% inserción laboral exitosa\n• 10% emprenden su propio negocio\n• 10% continúan estudios superiores\n• 50% ya empleados antes de graduarse\n\n🏗️ **Segunda Fase 2025:**\n• Residencia estudiantil para áreas remotas\n• Piscina industrial para especializaciones marítimas\n• Parque científico tecnológico con incubadoras\n• Talleres de realidad virtual, metaverso y simuladores\n• CAIPI: Centro de Atención Integral a la Primera Infancia\n\n👥 **Autoridades 2025:**\n• Gerente Educativa Rectora: Dra. Milena Gómez Cedeño\n• Subgerente de Currículo: Mgtr. Suzanne Sáez\n• Secretario General a.i.: Dr. Ricardo Mc Pherson\n• Consejo Directivo: Representantes del sector productivo, gobierno y academia\n\n¿Deseas información más específica sobre algún aspecto del ITSE?",
+    "keywords": [
+      "historia",
+      "creación",
+      "misión",
+      "visión",
+      "modelo educativo",
+      "cuándo se fundó",
+      "quién fundó",
+      "reconocimientos",
+      "alianzas",
+      "convenios",
+      "internacional",
+      "empleabilidad",
+      "inserción laboral",
+      "autoridades",
+      "rectora",
+      "segunda fase",
+      "expansión",
+      "CAIPI",
+      "parque científico",
+      "residencia",
+      "Singapur",
+      "MIT",
+      "Columbia",
+      "Foro Económico Mundial",
+      "Unión Europea",
+      "Canal de Panamá",
+      "Copa Airlines",
+      "escuelas",
+      "cuántas escuelas",
+      "qué es ITSE",
+      "sobre el ITSE",
+      "información del instituto",
+      "datos del ITSE",
+      "estadísticas",
+      "cifras",
+      "matrícula",
+      "estudiantes"
+    ]
+  }
+}

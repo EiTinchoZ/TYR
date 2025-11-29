@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/branding/01_logos/logo_icon_dark_bg.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TYR - Asistente Virtual del ITSE. Descubre información sobre carreras, admisiones, becas y más. Disponible 24/7 con 98.93% de precisión." />
+    <meta name="keywords" content="ITSE, chatbot, asistente virtual, carreras técnicas, Panamá, educación" />
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#0066CC" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="TYR" />
+    <link rel="manifest" href="/manifest.json" />
+
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TYR - Asistente Virtual ITSE" />
+    <meta property="og:description" content="Asistente virtual inteligente del ITSE. 98.93% de precisión, disponible 24/7." />
+    <meta property="og:image" content="/branding/05_social_media/og_image_1200x630.png" />
+
+    <title>TYR - Asistente Virtual ITSE</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Prevenir scroll automático antes de que React cargue
+      window.scrollTo(0, 0);
+      history.scrollRestoration = 'manual';
+      
+      // Bloquear scroll temporalmente
+      document.addEventListener('DOMContentLoaded', () => {
+        window.scrollTo(0, 0);
+        setTimeout(() => window.scrollTo(0, 0), 100);
+      });
+    </script>
+    <script type="module" src="/main.tsx"></script>
+  </body>
+</html>

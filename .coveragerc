@@ -1,0 +1,64 @@
+# Configuración de Coverage.py para TYR
+# Autor: Martín Bundy
+# Proyecto: TYR - Asistente Virtual ITSE
+
+[run]
+# Archivos a incluir en el análisis de coverage
+source = .
+
+# Archivos/directorios a omitir
+omit =
+    */tests/*
+    */test_*.py
+    */__pycache__/*
+    */venv/*
+    */env/*
+    */.venv/*
+    */archivos_obsoletos/*
+    */datasets_antiguos/*
+    */modelos_anteriores/*
+    */evaluacion_sesion3b/*
+    */scripts_desarrollo/*
+    */historial_conversaciones/*
+    setup.py
+    */__init__.py
+
+# Configuración de ejecución
+branch = True
+parallel = False
+
+[report]
+# Configuración del reporte
+precision = 2
+show_missing = True
+skip_covered = False
+
+# Excluir líneas del reporte
+exclude_lines =
+    # Comentarios de exclusión estándar
+    pragma: no cover
+
+    # No cubrir código de debugging
+    def __repr__
+
+    # No cubrir excepciones que nunca se espera alcanzar
+    raise AssertionError
+    raise NotImplementedError
+
+    # No cubrir código condicional de debugging
+    if __name__ == .__main__.:
+
+    # No cubrir bloques if TYPE_CHECKING
+    if TYPE_CHECKING:
+
+    # No cubrir abstract methods
+    @(abc\.)?abstractmethod
+
+[html]
+# Configuración del reporte HTML
+directory = htmlcov
+title = TYR - Coverage Report
+
+[xml]
+# Configuración del reporte XML (para CI/CD)
+output = coverage.xml
