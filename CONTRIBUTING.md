@@ -1,72 +1,72 @@
-# 🤝 Contribuir a TYR
+# 🤝 Contributing to TYR
 
-¡Gracias por tu interés en contribuir a TYR! Este documento proporciona guías para contribuir al proyecto.
+Thank you for your interest in contributing to TYR! This document provides guidelines for contributing to the project.
 
-## 📋 Tabla de Contenidos
+## 📋 Table of Contents
 
-- [Código de Conducta](#código-de-conducta)
-- [Cómo Contribuir](#cómo-contribuir)
-- [Configuración del Entorno de Desarrollo](#configuración-del-entorno-de-desarrollo)
-- [Proceso de Pull Request](#proceso-de-pull-request)
-- [Guía de Estilo](#guía-de-estilo)
-- [Reporte de Bugs](#reporte-de-bugs)
-- [Sugerencias de Mejoras](#sugerencias-de-mejoras)
+- [Code of Conduct](#code-of-conduct)
+- [How to Contribute](#how-to-contribute)
+- [Development Environment Setup](#development-environment-setup)
+- [Pull Request Process](#pull-request-process)
+- [Style Guide](#style-guide)
+- [Bug Reports](#bug-reports)
+- [Feature Suggestions](#feature-suggestions)
 
-## 📜 Código de Conducta
+## 📜 Code of Conduct
 
-Este proyecto se adhiere a un código de conducta profesional y respetuoso. Al participar, se espera que mantengas este código.
+This project adheres to a professional and respectful code of conduct. By participating, you are expected to uphold this code.
 
-### Nuestros Estándares
+### Our Standards
 
-- **Ser respetuoso** con otros contribuyentes
-- **Aceptar críticas constructivas** con gracia
-- **Enfocarse en lo que es mejor** para la comunidad
-- **Mostrar empatía** hacia otros miembros de la comunidad
+- **Be respectful** to other contributors
+- **Accept constructive criticism** gracefully
+- **Focus on what is best** for the community
+- **Show empathy** towards other community members
 
-## 🚀 Cómo Contribuir
+## 🚀 How to Contribute
 
-Hay muchas formas de contribuir a TYR:
+There are many ways to contribute to TYR:
 
-1. **Reportar bugs** - Si encuentras un error, abre un issue
-2. **Sugerir mejoras** - Propón nuevas características o mejoras
-3. **Mejorar documentación** - Ayuda a hacer la documentación más clara
-4. **Contribuir código** - Implementa nuevas características o arregla bugs
-5. **Mejorar el dataset** - Contribuye con nuevos ejemplos de entrenamiento
+1. **Report bugs** - If you find an error, open an issue
+2. **Suggest improvements** - Propose new features or enhancements
+3. **Improve documentation** - Help make the documentation clearer
+4. **Contribute code** - Implement new features or fix bugs
+5. **Improve the dataset** - Contribute new training examples
 
-## 🛠️ Configuración del Entorno de Desarrollo
+## 🛠️ Development Environment Setup
 
-### Prerrequisitos
+### Prerequisites
 
-- Python 3.8 o superior
-- Node.js 16+ y npm (para el frontend)
+- Python 3.8 or higher
+- Node.js 16+ and npm (for frontend)
 - Git
-- 4GB RAM mínimo (8GB recomendado para entrenar el modelo)
+- 4GB RAM minimum (8GB recommended for training the model)
 
-### Instalación
+### Installation
 
-1. **Fork el repositorio**
+1. **Fork the repository**
 
 ```bash
-# Clona tu fork
-git clone https://github.com/TU_USUARIO/TYR.git
+# Clone your fork
+git clone https://github.com/YOUR_USERNAME/TYR.git
 cd TYR
 ```
 
-2. **Configura el backend**
+2. **Set up the backend**
 
 ```bash
-# Crea entorno virtual
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Instala dependencias
+# Install dependencies
 pip install -r requirements.txt
 
-# Instala dependencias de desarrollo
+# Install development dependencies
 pip install -r backend/requirements.txt
 ```
 
-3. **Configura el frontend**
+3. **Set up the frontend**
 
 ```bash
 cd Figma
@@ -74,123 +74,123 @@ npm install
 cp .env.example .env
 ```
 
-4. **Descarga el modelo (o entrena uno nuevo)**
+4. **Download the model (or train a new one)**
 
-El modelo BERT no está en el repositorio por su tamaño. Opciones:
+The BERT model is not in the repository due to its size. Options:
 
-- **Opción A:** Descarga el modelo pre-entrenado desde [link a compartir]
-- **Opción B:** Entrena tu propio modelo siguiendo [GUIA_REENTRENAMIENTO.md](GUIA_REENTRENAMIENTO.md)
+- **Option A:** Download the pre-trained model from [Google Drive](https://drive.google.com/drive/folders/1EyCCO7cv14ubufmvhDyGc_Jv02YPTBSO)
+- **Option B:** Train your own model following the retraining guide
 
-5. **Ejecuta los tests**
+5. **Run the tests**
 
 ```bash
 # Backend
 pytest tests/ -v
 
-# Frontend (si aplica)
+# Frontend (if applicable)
 cd Figma
 npm test
 ```
 
-### Estructura del Proyecto
+### Project Structure
 
 ```
 TYR/
-├── backend/           # API FastAPI
-├── Figma/            # Frontend React + TypeScript
-├── data/             # Base de conocimiento JSON
-├── tests/            # Suite de tests
-├── documentacion/    # Documentación del proyecto
-└── tyr_chatbot.py   # Clase principal del chatbot
+├── backend/           # FastAPI API
+├── Figma/            # React + TypeScript frontend
+├── data/             # JSON knowledge base
+├── tests/            # Test suite
+├── documentacion/    # Project documentation
+└── tyr_chatbot.py   # Main chatbot class
 ```
 
-## 🔄 Proceso de Pull Request
+## 🔄 Pull Request Process
 
-1. **Crea una rama** desde `main`
+1. **Create a branch** from `main`
 
 ```bash
-git checkout -b feature/mi-nueva-caracteristica
-# o
-git checkout -b fix/mi-bug-fix
+git checkout -b feature/my-new-feature
+# or
+git checkout -b fix/my-bug-fix
 ```
 
-2. **Haz tus cambios**
+2. **Make your changes**
 
-- Escribe código limpio y bien documentado
-- Sigue la guía de estilo del proyecto
-- Añade tests para nuevas características
-- Actualiza la documentación si es necesario
+- Write clean and well-documented code
+- Follow the project's style guide
+- Add tests for new features
+- Update documentation if necessary
 
-3. **Commit tus cambios**
+3. **Commit your changes**
 
 ```bash
 git add .
-git commit -m "feat: descripción clara de los cambios"
+git commit -m "feat: clear description of changes"
 ```
 
-Usa commits semánticos:
-- `feat:` Nueva característica
-- `fix:` Corrección de bug
-- `docs:` Cambios en documentación
-- `style:` Formato, puntos y comas faltantes, etc
-- `refactor:` Refactorización de código
-- `test:` Añadir tests
-- `chore:` Mantenimiento
+Use semantic commits:
+- `feat:` New feature
+- `fix:` Bug fix
+- `docs:` Documentation changes
+- `style:` Formatting, missing semicolons, etc
+- `refactor:` Code refactoring
+- `test:` Add tests
+- `chore:` Maintenance
 
-4. **Push a tu fork**
+4. **Push to your fork**
 
 ```bash
-git push origin feature/mi-nueva-caracteristica
+git push origin feature/my-new-feature
 ```
 
-5. **Abre un Pull Request**
+5. **Open a Pull Request**
 
-- Describe claramente qué cambios hiciste y por qué
-- Referencia cualquier issue relacionado
-- Asegúrate de que todos los tests pasen
-- Solicita revisión de código
+- Clearly describe what changes you made and why
+- Reference any related issues
+- Ensure all tests pass
+- Request code review
 
-### Criterios de Aceptación
+### Acceptance Criteria
 
-Tu PR será aceptado si:
+Your PR will be accepted if:
 
-- ✅ Todos los tests pasan
-- ✅ El código sigue las guías de estilo
-- ✅ Está bien documentado
-- ✅ No introduce bugs conocidos
-- ✅ La documentación está actualizada
+- ✅ All tests pass
+- ✅ Code follows style guidelines
+- ✅ It is well documented
+- ✅ Doesn't introduce known bugs
+- ✅ Documentation is updated
 
-## 🎨 Guía de Estilo
+## 🎨 Style Guide
 
 ### Python
 
-- Sigue [PEP 8](https://pep8.org/)
-- Usa type hints cuando sea posible
-- Documenta funciones con docstrings
-- Máximo 88 caracteres por línea (Black formatter)
+- Follow [PEP 8](https://pep8.org/)
+- Use type hints when possible
+- Document functions with docstrings
+- Maximum 88 characters per line (Black formatter)
 
 ```python
 def procesar_mensaje(mensaje: str, confianza_minima: float = 0.8) -> dict:
     """
-    Procesa un mensaje del usuario y retorna la respuesta del chatbot.
+    Process a user message and return the chatbot response.
 
     Args:
-        mensaje: Texto del usuario
-        confianza_minima: Umbral de confianza mínimo
+        mensaje: User text
+        confianza_minima: Minimum confidence threshold
 
     Returns:
-        Dict con respuesta, intención, confianza y sentimiento
+        Dict with response, intent, confidence, and sentiment
     """
-    # Tu código aquí
+    # Your code here
     pass
 ```
 
 ### TypeScript / React
 
-- Usa TypeScript estricto
-- Componentes funcionales con hooks
-- Nombres de componentes en PascalCase
-- Props tipadas con interfaces
+- Use strict TypeScript
+- Functional components with hooks
+- Component names in PascalCase
+- Props typed with interfaces
 
 ```typescript
 interface ChatMessageProps {
@@ -200,90 +200,90 @@ interface ChatMessageProps {
 }
 
 const ChatMessage: React.FC<ChatMessageProps> = ({ mensaje, esUsuario, timestamp }) => {
-  // Tu código aquí
+  // Your code here
 }
 ```
 
 ### Commits
 
-Usa [Conventional Commits](https://www.conventionalcommits.org/):
+Use [Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
-feat(chat): añadir soporte para voz
-fix(bert): corregir clasificación de intención
-docs(readme): actualizar instrucciones de instalación
+feat(chat): add voice support
+fix(bert): correct intent classification
+docs(readme): update installation instructions
 ```
 
-## 🐛 Reporte de Bugs
+## 🐛 Bug Reports
 
-Si encuentras un bug, por favor abre un [issue](https://github.com/USUARIO/TYR/issues) con:
+If you find a bug, please open an [issue](https://github.com/EiTinchoZ/TYR/issues) with:
 
-### Template de Bug Report
+### Bug Report Template
 
 ```markdown
-**Descripción del bug**
-Descripción clara y concisa del bug.
+**Bug Description**
+Clear and concise description of the bug.
 
-**Pasos para reproducir**
-1. Ir a '...'
-2. Hacer click en '...'
-3. Scroll hasta '...'
-4. Ver error
+**Steps to Reproduce**
+1. Go to '...'
+2. Click on '...'
+3. Scroll to '...'
+4. See error
 
-**Comportamiento esperado**
-Qué esperabas que sucediera.
+**Expected Behavior**
+What you expected to happen.
 
 **Screenshots**
-Si aplica, añade screenshots.
+If applicable, add screenshots.
 
-**Entorno:**
-- OS: [ej. Windows 10, macOS 14.1, Ubuntu 22.04]
-- Python: [ej. 3.10.5]
-- Node.js: [ej. 18.16.0]
-- Navegador: [ej. Chrome 120, Firefox 121]
+**Environment:**
+- OS: [e.g. Windows 10, macOS 14.1, Ubuntu 22.04]
+- Python: [e.g. 3.10.5]
+- Node.js: [e.g. 18.16.0]
+- Browser: [e.g. Chrome 120, Firefox 121]
 
-**Contexto adicional**
-Cualquier otra información relevante.
+**Additional Context**
+Any other relevant information.
 ```
 
-## 💡 Sugerencias de Mejoras
+## 💡 Feature Suggestions
 
-Si tienes una idea para mejorar TYR, abre un [issue](https://github.com/USUARIO/TYR/issues) con:
+If you have an idea to improve TYR, open an [issue](https://github.com/EiTinchoZ/TYR/issues) with:
 
-### Template de Feature Request
+### Feature Request Template
 
 ```markdown
-**¿Tu feature request está relacionado con un problema?**
-Descripción clara del problema. Ej: "Me frustra que..."
+**Is your feature request related to a problem?**
+Clear description of the problem. E.g., "I'm frustrated that..."
 
-**Describe la solución que te gustaría**
-Descripción clara de lo que quieres que suceda.
+**Describe the solution you'd like**
+Clear description of what you want to happen.
 
-**Describe alternativas que hayas considerado**
-Otras soluciones o características que consideraste.
+**Describe alternatives you've considered**
+Other solutions or features you've considered.
 
-**Contexto adicional**
-Screenshots, mockups, o cualquier contexto adicional.
+**Additional Context**
+Screenshots, mockups, or any additional context.
 ```
 
 ## 🧪 Tests
 
-Todos los cambios deben incluir tests apropiados:
+All changes must include appropriate tests:
 
 ### Backend Tests
 
 ```bash
-# Ejecutar todos los tests
+# Run all tests
 pytest tests/ -v
 
-# Ejecutar con coverage
+# Run with coverage
 pytest tests/ --cov=. --cov-report=html
 
-# Ejecutar tests específicos
+# Run specific tests
 pytest tests/test_tyr_chatbot.py -v
 ```
 
-### Frontend Tests (si aplica)
+### Frontend Tests (if applicable)
 
 ```bash
 cd Figma
@@ -291,72 +291,72 @@ npm test
 npm run test:coverage
 ```
 
-### Escribir Tests
+### Writing Tests
 
 ```python
-# tests/test_mi_funcionalidad.py
+# tests/test_my_functionality.py
 import pytest
 from tyr_chatbot import TYRChatbot
 
-def test_clasificacion_intencion():
-    """Test que verifica clasificación correcta de intención"""
+def test_intent_classification():
+    """Test that verifies correct intent classification"""
     chatbot = TYRChatbot()
-    resultado = chatbot.procesar_mensaje("¿Qué carreras hay?")
+    result = chatbot.procesar_mensaje("What programs are available?")
 
-    assert resultado['intencion'] == 'informacion_carreras'
-    assert resultado['confianza'] > 0.8
+    assert result['intencion'] == 'informacion_carreras'
+    assert result['confianza'] > 0.8
 ```
 
-## 📝 Documentación
+## 📝 Documentation
 
-Si añades una nueva característica, actualiza:
+If you add a new feature, update:
 
-- README.md principal
-- Documentación técnica en `documentacion/`
-- Docstrings en el código
-- Ejemplos de uso si aplica
+- Main README.md
+- Technical documentation in `documentacion/`
+- Code docstrings
+- Usage examples if applicable
 
-## 🎯 Áreas para Contribuir
+## 🎯 Areas to Contribute
 
-Algunas áreas donde puedes contribuir:
+Some areas where you can contribute:
 
 ### Backend
-- Mejorar precisión del modelo BERT
-- Optimizar tiempos de respuesta
-- Añadir nuevas intenciones
-- Mejorar análisis de sentimiento
+- Improve BERT model accuracy
+- Optimize response times
+- Add new intents
+- Improve sentiment analysis
 
 ### Frontend
-- Mejorar UX/UI
-- Añadir modo oscuro/claro toggle
-- Implementar chat por voz
-- Optimizar performance
+- Improve UX/UI
+- Add dark/light mode toggle
+- Implement voice chat
+- Optimize performance
 
 ### Dataset
-- Añadir más ejemplos de entrenamiento
-- Mejorar variedad de patrones de pregunta
-- Corregir errores en respuestas
+- Add more training examples
+- Improve variety of question patterns
+- Fix errors in responses
 
-### Documentación
-- Mejorar guías de instalación
-- Añadir tutoriales
-- Traducir documentación
-- Crear videos demostrativos
+### Documentation
+- Improve installation guides
+- Add tutorials
+- Translate documentation
+- Create demo videos
 
-## ❓ Preguntas
+## ❓ Questions
 
-Si tienes preguntas, puedes:
+If you have questions, you can:
 
-1. Revisar la [documentación](documentacion/)
-2. Abrir un [issue](https://github.com/EiTinchoZ/TYR/issues)
-3. Contactar al mantenedor: mbundy.deltawaves@gmail.com
+1. Review the [documentation](documentacion/)
+2. Open an [issue](https://github.com/EiTinchoZ/TYR/issues)
+3. Contact the maintainer: mbundy.deltawaves@gmail.com
 
-## 📄 Licencia
+## 📄 License
 
-Al contribuir a TYR, aceptas que tus contribuciones serán licenciadas bajo la [Licencia MIT](LICENSE).
+By contributing to TYR, you agree that your contributions will be licensed under the [MIT License](LICENSE).
 
 ---
 
-**¡Gracias por contribuir a TYR! 🚀**
+**Thank you for contributing to TYR! 🚀**
 
-Tu ayuda hace que este proyecto sea mejor para toda la comunidad del ITSE.
+Your help makes this project better for the entire ITSE community.

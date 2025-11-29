@@ -1,89 +1,89 @@
-# 🔒 Política de Seguridad
+# 🔒 Security Policy
 
-## Versiones Soportadas
+## Supported Versions
 
-Actualmente soportamos las siguientes versiones de TYR con actualizaciones de seguridad:
+We currently support the following versions of TYR with security updates:
 
-| Versión | Soportada          |
+| Version | Supported          |
 | ------- | ------------------ |
-| 2.0.x   | ✅ Sí              |
+| 2.0.x   | ✅ Yes             |
 | 1.x.x   | ❌ No              |
 | < 1.0   | ❌ No              |
 
-## 🚨 Reportar una Vulnerabilidad
+## 🚨 Reporting a Vulnerability
 
-Si descubres una vulnerabilidad de seguridad en TYR, por favor **NO** abras un issue público.
+If you discover a security vulnerability in TYR, please **DO NOT** open a public issue.
 
-### Proceso de Reporte
+### Reporting Process
 
-1. **Envía un email privado** a: mbundy.deltawaves@gmail.com
-   - Asunto: "Security Vulnerability in TYR"
-   - Incluye una descripción detallada de la vulnerabilidad
-   - Si es posible, incluye pasos para reproducirla
-   - Adjunta cualquier código de prueba (PoC) si aplica
+1. **Send a private email** to: mbundy.deltawaves@gmail.com
+   - Subject: "Security Vulnerability in TYR"
+   - Include a detailed description of the vulnerability
+   - If possible, include steps to reproduce it
+   - Attach any proof of concept (PoC) code if applicable
 
-2. **Tiempo de respuesta**
-   - Reconoceremos tu reporte dentro de **48 horas**
-   - Te mantendremos informado sobre el progreso
-   - Te notificaremos cuando se lance un parche
+2. **Response time**
+   - We will acknowledge your report within **48 hours**
+   - We will keep you informed about the progress
+   - We will notify you when a patch is released
 
-3. **Divulgación responsable**
-   - Por favor, danos **90 días** para resolver la vulnerabilidad antes de hacer divulgación pública
-   - Coordinaremos contigo el anuncio público si es necesario
-   - Te daremos crédito en el CHANGELOG si lo deseas
+3. **Responsible disclosure**
+   - Please give us **90 days** to resolve the vulnerability before making it public
+   - We will coordinate with you on the public announcement if necessary
+   - We will give you credit in the CHANGELOG if you wish
 
-## 🛡️ Mejores Prácticas de Seguridad
+## 🛡️ Security Best Practices
 
-### Para Usuarios
+### For Users
 
-1. **Mantén actualizado el software**
+1. **Keep software updated**
    ```bash
    git pull origin main
    pip install -r requirements.txt --upgrade
    cd Figma && npm update
    ```
 
-2. **No expongas el backend directamente**
-   - Usa HTTPS en producción
-   - Configura CORS apropiadamente
-   - Usa un reverse proxy (nginx, Caddy)
+2. **Don't expose backend directly**
+   - Use HTTPS in production
+   - Configure CORS appropriately
+   - Use a reverse proxy (nginx, Caddy)
 
-3. **Variables de entorno**
-   - NUNCA subas archivos `.env` a GitHub
-   - Usa `.env.example` como plantilla
-   - Rota credenciales regularmente
+3. **Environment variables**
+   - NEVER upload `.env` files to GitHub
+   - Use `.env.example` as a template
+   - Rotate credentials regularly
 
-4. **Limita acceso al historial**
-   - El historial de conversaciones puede contener información sensible
-   - Está en `.gitignore` por defecto
-   - Implementa retención limitada en producción
+4. **Limit access to history**
+   - Conversation history may contain sensitive information
+   - It's in `.gitignore` by default
+   - Implement limited retention in production
 
-### Para Desarrolladores
+### For Developers
 
-1. **Dependencias**
-   - Ejecuta `npm audit` y `safety check` regularmente
-   - Actualiza dependencias con vulnerabilidades conocidas
-   - Usa versiones específicas en `requirements.txt`
+1. **Dependencies**
+   - Run `npm audit` and `safety check` regularly
+   - Update dependencies with known vulnerabilities
+   - Use specific versions in `requirements.txt`
 
-2. **Validación de entrada**
+2. **Input validation**
    ```python
-   # ✅ BUENO
+   # ✅ GOOD
    def procesar_mensaje(mensaje: str) -> dict:
        if not mensaje or len(mensaje) > 1000:
-           raise ValueError("Mensaje inválido")
-       mensaje_limpio = sanitizar(mensaje)
-       # ... procesar
+           raise ValueError("Invalid message")
+       clean_message = sanitize(mensaje)
+       # ... process
 
-   # ❌ MALO
+   # ❌ BAD
    def procesar_mensaje(mensaje):
-       # Sin validación
-       return eval(mensaje)  # NUNCA USES EVAL
+       # No validation
+       return eval(mensaje)  # NEVER USE EVAL
    ```
 
-3. **Autenticación (si implementas)**
-   - Usa bcrypt/argon2 para passwords
-   - Implementa rate limiting
-   - Usa tokens JWT con expiración
+3. **Authentication (if implemented)**
+   - Use bcrypt/argon2 for passwords
+   - Implement rate limiting
+   - Use JWT tokens with expiration
 
 4. **CORS**
    ```python
@@ -91,89 +91,89 @@ Si descubres una vulnerabilidad de seguridad en TYR, por favor **NO** abras un i
    app.add_middleware(
        CORSMiddleware,
        allow_origins=[
-           "https://tu-dominio.com",  # Específico en producción
-           # NO uses "*" en producción
+           "https://your-domain.com",  # Specific in production
+           # DO NOT use "*" in production
        ],
        allow_credentials=True,
-       allow_methods=["GET", "POST"],  # Solo los necesarios
+       allow_methods=["GET", "POST"],  # Only what's needed
        allow_headers=["*"],
    )
    ```
 
-## 🔍 Auditorías de Seguridad Conocidas
+## 🔍 Known Security Audits
 
 ### Python Backend
 
 ```bash
-# Instalar safety
+# Install safety
 pip install safety
 
-# Ejecutar audit
+# Run audit
 safety check --json
 ```
 
 ### Frontend Node.js
 
 ```bash
-# Audit de npm
+# npm audit
 cd Figma
 npm audit
 
-# Fix automático (si es posible)
+# Automatic fix (if possible)
 npm audit fix
 ```
 
-## 🚫 Qué NO es una vulnerabilidad
+## 🚫 What is NOT a Vulnerability
 
-Para evitar reportes innecesarios, los siguientes NO son considerados vulnerabilidades de seguridad:
+To avoid unnecessary reports, the following are NOT considered security vulnerabilities:
 
-1. **Problemas de usabilidad** - Usa GitHub Issues normal
-2. **Bugs sin impacto de seguridad** - Usa GitHub Issues
-3. **Configuraciones de ejemplo** - Los archivos `.example` son intencionalmente simples
-4. **Dependencias sin actualizar** - A menos que tengan CVE crítico
-5. **Falta de características de seguridad** - Sugiere en GitHub Issues
+1. **Usability issues** - Use normal GitHub Issues
+2. **Bugs without security impact** - Use GitHub Issues
+3. **Example configurations** - `.example` files are intentionally simple
+4. **Outdated dependencies** - Unless they have critical CVE
+5. **Missing security features** - Suggest in GitHub Issues
 
-## 📋 Checklist de Seguridad para Deployment
+## 📋 Deployment Security Checklist
 
-Antes de desplegar a producción:
+Before deploying to production:
 
-- [ ] Todas las dependencias están actualizadas
-- [ ] Variables de entorno configuradas (no hardcoded)
-- [ ] HTTPS habilitado
-- [ ] CORS configurado apropiadamente
-- [ ] Rate limiting implementado
-- [ ] Logs configurados (sin información sensible)
-- [ ] Firewall configurado
-- [ ] Backups automatizados
-- [ ] Monitoreo de errores habilitado
-- [ ] Plan de respuesta a incidentes definido
+- [ ] All dependencies are updated
+- [ ] Environment variables configured (not hardcoded)
+- [ ] HTTPS enabled
+- [ ] CORS configured appropriately
+- [ ] Rate limiting implemented
+- [ ] Logs configured (without sensitive information)
+- [ ] Firewall configured
+- [ ] Automated backups
+- [ ] Error monitoring enabled
+- [ ] Incident response plan defined
 
-## 🔐 Vulnerabilidades Conocidas
+## 🔐 Known Vulnerabilities
 
-### CVE-XXXX-XXXX (Ejemplo)
+### CVE-XXXX-XXXX (Example)
 
-**Estado:** ✅ Resuelto en v2.0.1
-**Severidad:** Media
-**Descripción:** [Descripción breve]
-**Mitigación:** Actualizar a v2.0.1+
+**Status:** ✅ Resolved in v2.0.1
+**Severity:** Medium
+**Description:** [Brief description]
+**Mitigation:** Update to v2.0.1+
 
 ---
 
-Actualmente no hay vulnerabilidades conocidas en la versión 2.0.x
+There are currently no known vulnerabilities in version 2.0.x
 
-## 📞 Contacto
+## 📞 Contact
 
-- **Email de seguridad:** mbundy.deltawaves@gmail.com
+- **Security email:** mbundy.deltawaves@gmail.com
 - **GitHub:** https://github.com/EiTinchoZ/TYR
 - **GitHub Security Advisories:** https://github.com/EiTinchoZ/TYR/security/advisories
 
-## 🙏 Agradecimientos
+## 🙏 Acknowledgments
 
-Agradecemos a los siguientes investigadores de seguridad por reportar vulnerabilidades de manera responsable:
+We thank the following security researchers for responsibly reporting vulnerabilities:
 
-- [Pendiente - Primera lista]
+- [Pending - First list]
 
 ---
 
-**Última actualización:** Noviembre 2025
-**Próxima revisión:** Cada 3 meses o cuando sea necesario
+**Last updated:** November 2025
+**Next review:** Every 3 months or as needed
