@@ -16,6 +16,12 @@ TYR is an intelligent virtual assistant built with BERT for the Instituto Técni
 
 ---
 
+<div align="center">
+  <img src="branding/01_logos/logo_horizontal_con_tagline.png" alt="TYR - Tu asistente virtual inteligente" width="600">
+</div>
+
+---
+
 ## Overview
 
 TYR combines state-of-the-art Natural Language Processing with a modern web interface to deliver an exceptional user experience. The system features:
