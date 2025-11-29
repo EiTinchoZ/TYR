@@ -9,7 +9,15 @@
       "Bash(npm install:*)",
       "Bash(git init:*)",
       "Bash(git check-ignore:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git reset:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git remote remove:*)"
     ],
     "deny": [],
     "ask": []
