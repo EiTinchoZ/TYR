@@ -2,32 +2,13 @@
 
 Esta carpeta contiene capturas de pantalla del proyecto TYR mostrando su interfaz y características principales.
 
-## Estructura
+## Screenshots Incluidos (5 esenciales)
 
-```
-screenshots/
-├── landing/          # Landing page y vistas generales
-├── chat/             # Chat modal y conversaciones
-└── features/         # Características especiales (PWA, export, etc)
-```
-
-## Screenshots Incluidos
-
-### Landing Page
-1. **01_landing_hero.png** - Vista principal del hero section
-2. **08_mobile_view.png** - Vista responsive en móvil
-
-### Chat
-3. **02_chat_modal_open.png** - Modal del chat abierto
-4. **03_consulta_carreras.png** - Consulta sobre carreras del ITSE
-5. **04_consulta_bigdata.png** - Consulta específica sobre Big Data
-6. **05_modo_demo.png** - Chat en modo demo (sin backend)
-7. **06_chat_features.png** - Botones y features del chat
-8. **07_dark_mode.png** - Interfaz en modo oscuro
-
-### Features
-9. **09_pwa_install.png** - Instalación como PWA
-10. **10_export_pdf.png** - Exportación de conversación a PDF
+1. **01_landing_page.png** - Landing page completa con hero y features
+2. **02_chat_interface.png** - Interfaz del chat modal (vacía)
+3. **03_chat_conversation.png** - Ejemplo de conversación funcional
+4. **04_chat_features.png** - Botones y controles del chat
+5. **05_mobile_responsive.png** - Vista responsive en móvil
 
 ## Guía para Tomar Screenshots
 

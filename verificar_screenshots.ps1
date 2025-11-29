@@ -3,16 +3,11 @@
 $screenshotsPath = "documentacion\screenshots"
 
 $requiredScreenshots = @(
-    "landing\01_landing_hero.png",
-    "chat\02_chat_modal_open.png",
-    "chat\03_consulta_carreras.png",
-    "chat\04_consulta_bigdata.png",
-    "chat\05_modo_demo.png",
-    "chat\06_chat_features.png",
-    "chat\07_dark_mode.png",
-    "landing\08_mobile_view.png",
-    "features\09_pwa_install.png",
-    "features\10_export_pdf.png"
+    "01_landing_page.png",
+    "02_chat_interface.png",
+    "03_chat_conversation.png",
+    "04_chat_features.png",
+    "05_mobile_responsive.png"
 )
 
 Write-Host "`n=== Verificación de Screenshots ===" -ForegroundColor Cyan
@@ -41,7 +36,8 @@ if ($missing.Count -gt 0) {
     foreach ($m in $missing) {
         Write-Host "  - $m" -ForegroundColor Red
     }
-    Write-Host "`nPor favor, toma estos screenshots siguiendo la guía." -ForegroundColor Cyan
+    Write-Host "`nPor favor, toma estos screenshots siguiendo GUIA_SCREENSHOTS.txt" -ForegroundColor Cyan
 } else {
     Write-Host "`n¡Todos los screenshots están presentes! ✓" -ForegroundColor Green
+    Write-Host "Ahora puedes hacer commit y push a GitHub." -ForegroundColor Cyan
 }

@@ -1,229 +1,164 @@
-GUIA COMPLETA PARA TOMAR SCREENSHOTS DE TYR
-============================================
+GUIA SIMPLIFICADA PARA SCREENSHOTS DE TYR
+==========================================
+
+SOLO 5 SCREENSHOTS ESENCIALES
+------------------------------
 
 PREPARACIÓN:
 -----------
 1. Abre el proyecto en VSCode
-2. Terminal 1: cd Figma && npm run dev
+2. Terminal: cd Figma && npm run dev
 3. Navegador: http://localhost:5173
-4. Usa Chrome para mejores resultados
-5. Resolución: 1920x1080 (pantalla completa)
+4. Usa Chrome en 1920x1080
 
 
-SCREENSHOT 1: Landing Hero
---------------------------
-Archivo: documentacion/screenshots/landing/01_landing_hero.png
+SCREENSHOT 1: Landing Page Completa
+------------------------------------
+Archivo: documentacion/screenshots/01_landing_page.png
 Resolución: 1920x1080
 
 QUÉ CAPTURAR:
-- Página completa desde arriba
+- Página principal completa (scroll hasta ver las secciones principales)
 - Hero section con título "TYR - Asistente Virtual del ITSE"
-- Subtítulo con 98.93% precisión
-- Botones "Probar TYR Ahora" y "Ver Demo"
-- Chat mockup animado a la derecha
-- NO hacer scroll, captura desde el inicio
+- Estadísticas (98.93% precisión, 4358 ejemplos, etc.)
+- Botones "Probar TYR Ahora" visibles
+- Vista general del diseño y branding
 
 CÓMO:
-1. Refresca la página (F5)
-2. Espera 2 segundos (para animaciones)
-3. Win + Shift + S
-4. Captura toda la pantalla visible
+1. Abre http://localhost:5173
+2. Refresca la página (F5)
+3. Scroll para capturar hero + primera sección de features
+4. Win + Shift + S
+5. Captura pantalla completa
 
 
-SCREENSHOT 2: Chat Modal Abierto
---------------------------------
-Archivo: documentacion/screenshots/chat/02_chat_modal_open.png
+SCREENSHOT 2: Chat Modal Abierto (Vista General)
+------------------------------------------------
+Archivo: documentacion/screenshots/02_chat_interface.png
 Resolución: 1920x1080
 
 QUÉ CAPTURAR:
-- Haz clic en "Probar TYR Ahora"
-- Modal del chat abierto (fondo oscuro)
-- Chat de 850px visible
-- Ya con 2-3 mensajes en el historial
-- Header del chat con logo TYR
-- Input de mensaje visible
+- Modal del chat abierto sobre la landing page
+- Header del chat con logo TYR y botones (modo oscuro, PDF, historial, etc.)
+- Chat vacío o con mensaje de bienvenida inicial
+- Input de mensaje con ícono de micrófono
+- Vista completa de la interfaz del chat (850px altura)
 
-CONVERSACIÓN DE EJEMPLO:
-Usuario: "Hola, ¿qué puedes hacer?"
-TYR: (respuesta automática del modo demo)
-Usuario: "Cuéntame sobre el ITSE"
-TYR: (respuesta sobre el ITSE)
+IMPORTANTE: NO incluir conversaciones, solo la interfaz limpia
 
 CÓMO:
-1. Haz clic en "Probar TYR Ahora"
-2. Escribe los mensajes de ejemplo
-3. Espera las respuestas
+1. Clic en "Probar TYR Ahora"
+2. Espera a que abra el modal
+3. NO escribas ningún mensaje (o solo el mensaje de bienvenida)
 4. Win + Shift + S
 5. Captura el modal completo
 
 
-SCREENSHOT 3: Consulta sobre Carreras
--------------------------------------
-Archivo: documentacion/screenshots/chat/03_consulta_carreras.png
+SCREENSHOT 3: Chat con Conversación (Ejemplo Único)
+---------------------------------------------------
+Archivo: documentacion/screenshots/03_chat_conversation.png
 Resolución: 1920x1080
 
 QUÉ CAPTURAR:
-- Chat con conversación sobre carreras
-- Usuario: "¿Qué carreras técnicas ofrece el ITSE?"
-- Respuesta de TYR con lista de carreras
-- Metadata visible (intención, confianza)
-- Scroll para mostrar respuesta completa
+- UNA sola conversación de ejemplo que demuestre:
+  * Pregunta del usuario
+  * Respuesta de TYR con formato Markdown
+  * Metadata visible (intención, confianza)
+  * Badges de información
 
-CONVERSACIÓN:
+CONVERSACIÓN RECOMENDADA:
 Usuario: "¿Qué carreras técnicas ofrece el ITSE?"
-TYR: (Lista de 16 carreras)
+TYR: (Respuesta con lista de carreras)
+
+IMPORTANTE: Solo ESTA conversación, no más ejemplos
 
 CÓMO:
-1. En el mismo chat, escribe la pregunta
+1. En el chat abierto, escribe la pregunta
 2. Espera la respuesta completa
-3. Captura mostrando la lista de carreras
+3. Asegúrate de que se vea:
+   - La pregunta del usuario (burbuja derecha)
+   - Respuesta de TYR (burbuja izquierda)
+   - Metadata/badges
+4. Captura
 
 
-SCREENSHOT 4: Consulta Big Data
--------------------------------
-Archivo: documentacion/screenshots/chat/04_consulta_bigdata.png
+SCREENSHOT 4: Features del Chat (Botones y Opciones)
+----------------------------------------------------
+Archivo: documentacion/screenshots/04_chat_features.png
 Resolución: 1920x1080
 
 QUÉ CAPTURAR:
-- Pregunta específica sobre Big Data
-- Respuesta detallada de TYR
-- Información completa de la carrera
+- Header del chat enfocado mostrando TODOS los botones:
+  * Modo claro/oscuro
+  * Historial
+  * Exportar PDF
+  * Compartir
+  * Refrescar
+- Área de input mostrando:
+  * Campo de texto
+  * Botón de micrófono (voz)
+  * Botón de enviar
 
-CONVERSACIÓN:
-Usuario: "Cuéntame sobre la carrera de Big Data"
-TYR: (Detalles de Big Data: duración, créditos, campo ocupacional)
+IMPORTANTE: Captura tipo "close-up" de los controles, NO conversación
 
 CÓMO:
-1. Continúa la conversación
-2. Escribe sobre Big Data
-3. Captura la respuesta completa
+1. Haz zoom si es necesario para ver bien los botones
+2. Asegúrate de que todos los íconos sean visibles
+3. Captura el header y el footer del chat juntos
 
 
-SCREENSHOT 5: Modo Demo
------------------------
-Archivo: documentacion/screenshots/chat/05_modo_demo.png
-Resolución: 1920x1080
-
-QUÉ CAPTURAR:
-- Chat funcionando SIN backend
-- Alguna pregunta respondida con mockResponses
-- Para demostrar fallback automático
-
-IMPORTANTE:
-- NO inicies el backend
-- Solo frontend corriendo
-- Chat responde con respuestas predefinidas
-
-CONVERSACIÓN:
-Usuario: "¿Qué becas hay disponibles?"
-TYR: (Respuesta del mockResponses.ts sobre becas)
-
-
-SCREENSHOT 6: Features del Chat
--------------------------------
-Archivo: documentacion/screenshots/chat/06_chat_features.png
-Resolución: 1920x1080
-
-QUÉ CAPTURAR:
-- Header del chat enfocado
-- Todos los botones visibles:
-  * Botón de modo claro/oscuro (sol/luna)
-  * Botón de historial
-  * Botón de exportar PDF
-  * Botón de compartir
-  * Botón de refrescar conversación
-- Input con ícono de micrófono visible
-
-CÓMO:
-1. Haz hover sobre los botones para ver tooltips
-2. Captura el header completo con botones
-
-
-SCREENSHOT 7: Modo Oscuro
--------------------------
-Archivo: documentacion/screenshots/chat/07_dark_mode.png
-Resolución: 1920x1080
-
-QUÉ CAPTURAR:
-- Haz clic en el botón de modo oscuro (luna)
-- Chat en tema oscuro
-- Con conversación activa
-- Contraste visible
-
-CÓMO:
-1. Clic en botón de modo oscuro
-2. Espera la transición
-3. Captura el chat en modo oscuro
-
-
-SCREENSHOT 8: Vista Móvil
--------------------------
-Archivo: documentacion/screenshots/landing/08_mobile_view.png
+SCREENSHOT 5: Vista Móvil Responsive
+------------------------------------
+Archivo: documentacion/screenshots/05_mobile_responsive.png
 Resolución: 375x812 (iPhone X)
 
 QUÉ CAPTURAR:
-- Landing page en vista móvil
-- Responsive design
-- Menú hamburguesa si aplica
+- Landing page O chat modal en vista móvil
+- Mostrando que el diseño es totalmente responsive
+- Navegación móvil funcional
 
 CÓMO:
 1. F12 (DevTools)
 2. Ctrl + Shift + M (Toggle device toolbar)
-3. Selecciona "iPhone X" o similar
+3. Selecciona "iPhone X" (375x812)
 4. Refresca la página
-5. Captura pantalla completa del móvil
-
-
-SCREENSHOT 9: PWA Instalación
------------------------------
-Archivo: documentacion/screenshots/features/09_pwa_install.png
-Resolución: 1920x1080
-
-QUÉ CAPTURAR:
-- Menú de Chrome (3 puntos arriba derecha)
-- Opción "Instalar TYR" visible
-- O banner de instalación si aparece
-
-CÓMO:
-1. Clic en menú de Chrome (⋮)
-2. Busca "Instalar TYR" o "Instalar aplicación"
-3. Captura el menú con la opción visible
-
-
-SCREENSHOT 10: Exportar PDF
----------------------------
-Archivo: documentacion/screenshots/features/10_export_pdf.png
-Resolución: 1920x1080
-
-QUÉ CAPTURAR:
-- Conversación activa
-- Clic en botón "Exportar PDF"
-- Diálogo de descarga o vista previa
-
-CÓMO:
-1. Con conversación activa
-2. Clic en botón de exportar PDF
-3. Captura el momento de la descarga/vista previa
+5. Captura: Landing page inicial o chat modal abierto
+6. La que se vea mejor en móvil
 
 
 VERIFICACIÓN FINAL:
 ------------------
-Ejecuta: .\verificar_screenshots.ps1
+Debes tener EXACTAMENTE 5 archivos:
 
-Debe mostrar:
-[✓] landing\01_landing_hero.png
-[✓] chat\02_chat_modal_open.png
-[✓] chat\03_consulta_carreras.png
-... (todos los 10 screenshots)
+documentacion/screenshots/
+├── 01_landing_page.png         (Landing completa)
+├── 02_chat_interface.png       (Chat vacío/interfaz)
+├── 03_chat_conversation.png    (1 conversación de ejemplo)
+├── 04_chat_features.png        (Botones y controles)
+└── 05_mobile_responsive.png    (Vista móvil)
 
-¡Encontrados: 10 / 10!
+
+RESUMEN DE CONTENIDO:
+---------------------
+✓ Screenshot 1: Muestra el sitio web y diseño general
+✓ Screenshot 2: Muestra la interfaz del chat (vacía)
+✓ Screenshot 3: Muestra UNA conversación funcional
+✓ Screenshot 4: Muestra las características/botones
+✓ Screenshot 5: Muestra responsive design
+
+EVITAR:
+-------
+✗ NO repetir múltiples conversaciones
+✗ NO capturar lo mismo dos veces
+✗ NO incluir screenshots de streamlit antiguo
+✗ NO incluir información personal
 
 
 DESPUÉS DE TOMAR LOS SCREENSHOTS:
 ---------------------------------
-1. Verifica calidad y legibilidad
-2. Ejecuta verificar_screenshots.ps1
-3. Commit: git add documentacion/screenshots/
-4. Push: git push origin main
-5. Actualiza README.md con las imágenes
-
+1. Verifica que los 5 archivos estén en documentacion/screenshots/
+2. Verifica calidad y legibilidad
+3. Commit y push:
+   git add documentacion/screenshots/
+   git commit -m "docs: add 5 essential screenshots with new React frontend"
+   git push origin main
