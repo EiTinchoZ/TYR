@@ -8,7 +8,7 @@ El modelo BERT entrenado (`modelo_bert_tyr_10_clases_COMPLETO/`) pesa aproximada
 
 #### Google Drive
 
-1. Descarga el modelo desde: [**Link de Google Drive**](https://drive.google.com/PENDIENTE)
+1. Descarga el modelo desde: [**Link de Google Drive**](https://drive.google.com/drive/folders/1EyCCO7cv14ubufmvhDyGc_Jv02YPTBSO?usp=sharing)
 2. Extrae el archivo ZIP
 3. Coloca la carpeta `modelo_bert_tyr_10_clases_COMPLETO/` en la raíz del proyecto TYR
 

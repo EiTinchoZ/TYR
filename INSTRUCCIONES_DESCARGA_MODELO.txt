@@ -5,7 +5,7 @@
 El modelo BERT entrenado (421MB) no está incluido en el repositorio de GitHub debido a su tamaño.
 
 **Descarga el modelo desde Google Drive:**
-[AQUÍ VAS A PONER TU LINK DE GOOGLE DRIVE]
+https://drive.google.com/drive/folders/1EyCCO7cv14ubufmvhDyGc_Jv02YPTBSO?usp=sharing
 
 Archivo: `modelo_bert_tyr_10_clases_COMPLETO.zip` (421MB)
 

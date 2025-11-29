@@ -227,7 +227,7 @@ The trained BERT model (421MB) is required for full AI-powered responses. It's n
 ### Download Instructions
 
 1. **Download the model from Google Drive:**
-   - [Download modelo_bert_tyr_10_clases_COMPLETO.zip](LINK_GOOGLE_DRIVE_AQUI)
+   - [Download modelo_bert_tyr_10_clases_COMPLETO.zip](https://drive.google.com/drive/folders/1EyCCO7cv14ubufmvhDyGc_Jv02YPTBSO?usp=sharing)
    - File size: 421MB
 
 2. **Extract to project root:**
