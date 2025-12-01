@@ -124,3 +124,4 @@ data/*.pickle
 
 # Entregables académicos (solo para uso local del profesor)
 entregables_profesor/
+entregable_lenguajes_ia/
