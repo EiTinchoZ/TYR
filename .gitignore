@@ -125,3 +125,9 @@ data/*.pickle
 # Entregables académicos (solo para uso local del profesor)
 entregables_profesor/
 entregable_lenguajes_ia/
+
+# Archivos de preparación para presentación (uso personal)
+ANALISIS_RUBRICA_EVALUACION.md
+CHECKLIST_PRESENTACION_FINAL.md
+RESUMEN_NER_PRESENTACION.md
+PROYECTO_TYR_RESUMEN_CV.md
