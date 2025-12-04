@@ -29,10 +29,11 @@ TYR combines state-of-the-art Natural Language Processing with a modern web inte
 - **Dual-mode operation**: Full AI-powered mode with BERT (98.93% accuracy) or intelligent demo mode with pre-defined responses
 - **Progressive Web App**: Installable on Android and iOS devices with offline support
 - **Professional UI/UX**: Modern landing page with integrated chat modal, responsive design, and smooth animations
-- **Advanced NLP**: BERT-based intent classification with VADER sentiment analysis
+- **Advanced NLP**: BERT-based intent classification with VADER sentiment analysis and custom NER (Named Entity Recognition)
+- **Entity Extraction**: Recognizes 6 types of entities (careers, services, organizations, locations, requirements, time periods)
 - **Comprehensive knowledge base**: Complete information about ITSE's programs, services, and procedures
 
-The assistant handles 9 different intent categories and provides specific responses for 16 technical programs, special services (CAIPI daycare, CIIECYT research center), international recognitions, and institutional partnerships.
+The assistant handles 9 different intent categories and provides specific responses for 16 technical programs, special services (CAIPI daycare, CIIECYT research center), international recognizations, and institutional partnerships.
 
 ---
 
@@ -117,6 +118,25 @@ streamlit run tyr_chatbot.py
 - Smooth animations
 - Modern gradients and shadows
 
+### Named Entity Recognition (NER)
+- Custom domain-specific entity extraction
+- 6 entity types: CARRERA, SERVICIO, ORGANIZACION, UBICACION, REQUISITO, PERIODO
+- ~95% precision on ITSE domain entities
+- 21 unit tests with 100% pass rate
+- Integrated in main chatbot pipeline
+- Zero additional dependencies
+
+**Example:**
+```python
+Input: "Quiero estudiar Big Data en el ITSE de Tocumen"
+Output:
+  CARRERA: ['big data']
+  ORGANIZACION: ['itse']
+  UBICACION: ['tocumen']
+```
+
+See [IMPLEMENTACION_NER.md](IMPLEMENTACION_NER.md) for technical details.
+
 ---
 
 ## Model Metrics
@@ -167,11 +187,12 @@ streamlit run tyr_chatbot.py
 - BERT: `dccuchile/bert-base-spanish-wwm-cased`
 - VADER-ES for sentiment analysis
 
-### Machine Learning
+### Machine Learning & NLP
 - Model: BERT Spanish (110M parameters)
 - Fine-tuned on 4,358 custom examples
 - 9-class intent classification
 - Sentiment analysis with VADER
+- Custom NER for entity extraction (6 types)
 
 ---
 
@@ -197,10 +218,11 @@ TYR/
 │   ├── tyr_simple.py              # BERT chatbot core
 │   └── requirements.txt
 │
-├── tests/                          # Test suite (59 tests)
+├── tests/                          # Test suite (80 tests)
 │   ├── test_tyr_chatbot.py        # BERT classification tests
 │   ├── test_normalizacion.py     # Text normalization tests
-│   └── test_respuestas.py         # Response tests
+│   ├── test_respuestas.py         # Response tests
+│   └── test_ner.py                # NER entity extraction tests (21)
 │
 ├── data/                           # Knowledge base (JSON)
 │   ├── carreras_itse.json         # 16 technical programs
@@ -218,9 +240,13 @@ TYR/
 │   ├── 03_illustrations/          # Illustrations
 │   └── 04_backgrounds/            # Backgrounds
 │
+├── ner_module.py                  # Named Entity Recognition module
+├── demo_ner.py                    # NER demonstration script
+├── verificar_ner.py               # NER verification script
 ├── Dataset_TYR_3000_FINAL.json    # Training dataset
-├── tyr_chatbot.py                 # Streamlit app
+├── tyr_chatbot.py                 # Streamlit app (with NER integrated)
 ├── requirements.txt               # Python dependencies
+├── IMPLEMENTACION_NER.md          # NER technical documentation
 └── README.md                      # This file
 ```
 
@@ -404,6 +430,7 @@ curl -X POST http://localhost:8000/chat \
 
 - [MVP_GUIDE.md](MVP_GUIDE.md) - Quick MVP deployment guide
 - [DEPLOYMENT.md](DEPLOYMENT.md) - Full deployment instructions
+- [IMPLEMENTACION_NER.md](IMPLEMENTACION_NER.md) - NER technical documentation
 - [CHANGELOG.md](CHANGELOG.md) - Version history
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
 - [SECURITY.md](SECURITY.md) - Security policy
@@ -415,15 +442,26 @@ curl -X POST http://localhost:8000/chat \
 
 The project includes comprehensive automated tests:
 
-- **59 passing tests** with 91% code coverage
+- **80 passing tests** with 91% code coverage
 - Unit tests for text normalization
 - Integration tests for BERT classification
 - Response accuracy tests
 - Sentiment analysis tests
+- **NER entity extraction tests (21 tests)**
 
-Run tests with:
+Run all tests:
 ```bash
 pytest -v
+```
+
+Run NER tests specifically:
+```bash
+pytest tests/test_ner.py -v
+```
+
+Verify NER implementation:
+```bash
+python verificar_ner.py
 ```
 
 ---
@@ -475,6 +513,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Version:** 1.1.0
-**Last Updated:** November 2025
+**Version:** 1.2.0 (with NER)
+**Last Updated:** December 2025
 **Status:** Production Ready
+
+**Latest Changes:**
+- Added custom Named Entity Recognition (NER) module
+- 6 entity types recognized (CARRERA, SERVICIO, ORGANIZACION, UBICACION, REQUISITO, PERIODO)
+- 21 new tests for NER (80 total tests)
+- Integrated NER in main chatbot pipeline
+- ~95% precision on domain-specific entities

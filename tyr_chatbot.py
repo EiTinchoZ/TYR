@@ -19,6 +19,7 @@ from typing import Dict, Tuple, Optional
 from pathlib import Path
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from ner_module import NERExtractor
 
 # Configurar logging
 logging.basicConfig(
@@ -79,6 +80,10 @@ class TYR:
         # Inicializar VADER
         self.vader = SentimentIntensityAnalyzer()
         logger.info("VADER inicializado")
+
+        # Inicializar NER
+        self.ner = NERExtractor()
+        logger.info("NER extractor inicializado")
 
         # Cargar base de respuestas
         self._cargar_respuestas_base()
@@ -1313,23 +1318,30 @@ class TYR:
             # 1. Preprocesar entrada
             texto_limpio = self.procesar_entrada(user_input)
 
-            # 2. Clasificar intención
+            # 2. Extraer entidades nombradas (NER)
+            entidades = self.ner.extraer_entidades(user_input)
+            resumen_entidades = self.ner.obtener_resumen(entidades)
+            logger.info(f"Entidades detectadas: {resumen_entidades}")
+
+            # 3. Clasificar intención
             intencion, confianza, todas_probs = self.clasificar_intencion(texto_limpio)
 
-            # 3. Analizar sentimiento
+            # 4. Analizar sentimiento
             sentimiento = self.analizar_sentimiento(texto_limpio)
 
-            # 4. Generar respuesta (pasar texto original para búsqueda de carreras)
+            # 5. Generar respuesta (pasar texto original para búsqueda de carreras)
             respuesta = self.generar_respuesta(intencion, sentimiento, texto_limpio)
 
-            # 5. Preparar metadata
+            # 6. Preparar metadata
             metadata = {
                 "intencion": intencion,
                 "confianza": confianza,
                 "sentimiento": sentimiento["categoria"],
                 "sentimiento_compound": sentimiento["compound"],
                 "todas_probabilidades": todas_probs,
-                "texto_procesado": texto_limpio
+                "texto_procesado": texto_limpio,
+                "entidades": resumen_entidades,
+                "entidades_detalladas": entidades
             }
 
             logger.info(f"Consulta procesada exitosamente. Intención: {intencion}")
