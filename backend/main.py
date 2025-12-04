@@ -85,6 +85,8 @@ class ChatResponse(BaseModel):
     confianza: float = Field(..., ge=0, le=1, description="Nivel de confianza (0-1)")
     sentimiento: str = Field(..., description="Categoría de sentimiento (positivo/negativo/neutro)")
     sentimiento_compound: float = Field(..., description="Score compound del sentimiento (-1 a 1)")
+    entidades: dict = Field(default_factory=dict, description="Entidades NER extraídas del mensaje")
+    entidades_detalladas: list = Field(default_factory=list, description="Entidades NER con posiciones")
 
     class Config:
         json_schema_extra = {

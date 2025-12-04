@@ -19,6 +19,9 @@ interface Message {
   timestamp: Date;
   intencion?: string;
   confianza?: number;
+  entidades?: {
+    [key: string]: string[];
+  };
 }
 
 interface ChatResponse {
@@ -27,6 +30,15 @@ interface ChatResponse {
   confianza: number;
   sentimiento: string;
   sentimiento_compound: number;
+  entidades?: {
+    [key: string]: string[];
+  };
+  entidades_detalladas?: Array<{
+    texto: string;
+    tipo: string;
+    inicio: number;
+    fin: number;
+  }>;
 }
 
 interface Conversation {
@@ -347,6 +359,7 @@ export function TYRChat() {
         timestamp: new Date(),
         intencion: data.intencion,
         confianza: data.confianza,
+        entidades: data.entidades,
       };
 
       setMensajes((prev) => [...prev, mensajeTYR]);
@@ -846,6 +859,94 @@ export function TYRChat() {
                         {((mensaje.confianza || 0) * 100).toFixed(1)}% confianza
                       </span>
                     </div>
+
+                    {/* NER Entities Display */}
+                    {mensaje.entidades && Object.keys(mensaje.entidades).length > 0 && (
+                      <div className="mt-3 pt-3 border-t border-[#2E3A4F]/30">
+                        <div className="flex items-center gap-1.5 mb-2">
+                          <svg
+                            className="size-3.5 text-[#3399FF]"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+                            />
+                          </svg>
+                          <span className="text-[10px] text-[#8B96A8] font-semibold uppercase tracking-wider">
+                            Entidades detectadas
+                          </span>
+                        </div>
+                        <div className="flex flex-wrap gap-1.5">
+                          {Object.entries(mensaje.entidades).map(([tipo, valores]) => (
+                            <div
+                              key={tipo}
+                              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg backdrop-blur-sm border transition-all hover:scale-105"
+                              style={{
+                                backgroundColor:
+                                  tipo === "CARRERA"
+                                    ? "rgba(139, 92, 246, 0.15)"
+                                    : tipo === "SERVICIO"
+                                    ? "rgba(34, 197, 94, 0.15)"
+                                    : tipo === "ORGANIZACION"
+                                    ? "rgba(59, 130, 246, 0.15)"
+                                    : tipo === "UBICACION"
+                                    ? "rgba(249, 115, 22, 0.15)"
+                                    : tipo === "REQUISITO"
+                                    ? "rgba(236, 72, 153, 0.15)"
+                                    : tipo === "PERIODO"
+                                    ? "rgba(245, 158, 11, 0.15)"
+                                    : "rgba(100, 116, 139, 0.15)",
+                                borderColor:
+                                  tipo === "CARRERA"
+                                    ? "rgba(139, 92, 246, 0.3)"
+                                    : tipo === "SERVICIO"
+                                    ? "rgba(34, 197, 94, 0.3)"
+                                    : tipo === "ORGANIZACION"
+                                    ? "rgba(59, 130, 246, 0.3)"
+                                    : tipo === "UBICACION"
+                                    ? "rgba(249, 115, 22, 0.3)"
+                                    : tipo === "REQUISITO"
+                                    ? "rgba(236, 72, 153, 0.3)"
+                                    : tipo === "PERIODO"
+                                    ? "rgba(245, 158, 11, 0.3)"
+                                    : "rgba(100, 116, 139, 0.3)",
+                              }}
+                            >
+                              <span
+                                className="text-[9px] font-bold uppercase tracking-wide"
+                                style={{
+                                  color:
+                                    tipo === "CARRERA"
+                                      ? "#A78BFA"
+                                      : tipo === "SERVICIO"
+                                      ? "#4ADE80"
+                                      : tipo === "ORGANIZACION"
+                                      ? "#60A5FA"
+                                      : tipo === "UBICACION"
+                                      ? "#FB923C"
+                                      : tipo === "REQUISITO"
+                                      ? "#F472B6"
+                                      : tipo === "PERIODO"
+                                      ? "#FCD34D"
+                                      : "#94A3B8",
+                                }}
+                              >
+                                {tipo}
+                              </span>
+                              <span className="text-[11px] text-[#E0E7FF] font-medium">
+                                {valores.join(", ")}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>

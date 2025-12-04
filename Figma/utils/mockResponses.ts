@@ -9,6 +9,9 @@ interface MockResponse {
   confianza: number;
   sentimiento: string;
   sentimiento_compound: number;
+  entidades?: {
+    [key: string]: string[];
+  };
 }
 
 const MOCK_RESPONSES: Record<string, MockResponse> = {
@@ -17,7 +20,10 @@ const MOCK_RESPONSES: Record<string, MockResponse> = {
     intencion: "saludo",
     confianza: 0.95,
     sentimiento: "positivo",
-    sentimiento_compound: 0.8
+    sentimiento_compound: 0.8,
+    entidades: {
+      "ORGANIZACION": ["itse"]
+    }
   },
 
   carreras: {
@@ -25,7 +31,11 @@ const MOCK_RESPONSES: Record<string, MockResponse> = {
     intencion: "informacion_carreras",
     confianza: 0.98,
     sentimiento: "neutro",
-    sentimiento_compound: 0.5
+    sentimiento_compound: 0.5,
+    entidades: {
+      "ORGANIZACION": ["itse"],
+      "PERIODO": ["2-3 años"]
+    }
   },
 
   admision: {
@@ -33,7 +43,11 @@ const MOCK_RESPONSES: Record<string, MockResponse> = {
     intencion: "proceso_admision",
     confianza: 0.96,
     sentimiento: "neutro",
-    sentimiento_compound: 0.3
+    sentimiento_compound: 0.3,
+    entidades: {
+      "ORGANIZACION": ["itse"],
+      "REQUISITO": ["cédula", "diploma", "fotos"]
+    }
   },
 
   becas: {
@@ -41,7 +55,11 @@ const MOCK_RESPONSES: Record<string, MockResponse> = {
     intencion: "informacion_becas",
     confianza: 0.97,
     sentimiento: "positivo",
-    sentimiento_compound: 0.6
+    sentimiento_compound: 0.6,
+    entidades: {
+      "ORGANIZACION": ["itse"],
+      "SERVICIO": ["becas"]
+    }
   },
 
   ia: {
@@ -49,7 +67,23 @@ const MOCK_RESPONSES: Record<string, MockResponse> = {
     intencion: "informacion_carrera_especifica",
     confianza: 0.99,
     sentimiento: "positivo",
-    sentimiento_compound: 0.7
+    sentimiento_compound: 0.7,
+    entidades: {
+      "CARRERA": ["inteligencia artificial"]
+    }
+  },
+
+  ciberseguridad: {
+    respuesta: "La **T.S. en Ciberseguridad** es una de nuestras carreras más demandadas del ITSE:\n\n**📚 Escuela:** Innovación Digital\n\n**⏱️ Duración:** • Jornada Diurna: 2 años 4 meses • Jornada Nocturna: 3 años • Total: 122 créditos\n\n**💡 ¿Qué aprenderás?**\nPrevenir y detectar amenazas de seguridad. Recuperar incidentes, proteger datos y sistemas. Aplicar normativas, políticas y procedimientos de seguridad informática.\n\n**💼 Campo Ocupacional:**\n• Analista de seguridad informática\n• Administrador redes sistemas seguros\n• Auditor de ciberseguridad\n• Consultor seguridad informática\n• Ingeniero de seguridad\n• ...y 7 opciones más\n\n**💰 Becas disponibles:**\nEl ITSE ofrece becas del IFARHU y programas de ayuda financiera.\n\n**📍 Ubicación:** Tocumen, Panamá\n\n**🔗 Más información:** [Oferta académica ITSE](https://www.itse.ac.pa/oferta-academica/tecnico-superior-en-ciberseguridad)\n\n¿Te gustaría saber sobre el proceso de inscripción o requisitos?",
+    intencion: "informacion_carrera_especifica",
+    confianza: 0.967,
+    sentimiento: "positivo",
+    sentimiento_compound: 0.8,
+    entidades: {
+      "CARRERA": ["ciberseguridad"],
+      "ORGANIZACION": ["itse", "ifarhu"],
+      "UBICACION": ["tocumen"]
+    }
   },
 
   horarios: {
@@ -57,14 +91,28 @@ const MOCK_RESPONSES: Record<string, MockResponse> = {
     intencion: "horarios_contacto",
     confianza: 0.94,
     sentimiento: "neutro",
-    sentimiento_compound: 0.4
+    sentimiento_compound: 0.4,
+    entidades: {
+      "ORGANIZACION": ["itse"],
+      "UBICACION": ["tocumen", "panamá"],
+      "PERIODO": ["lunes a viernes", "sábados"]
+    }
   }
 };
 
 export function getMockResponse(mensaje: string): MockResponse {
   const mensajeLower = mensaje.toLowerCase();
 
-  // Detectar intención basándose en palabras clave
+  // Detectar carreras específicas primero (más específico)
+  if (mensajeLower.match(/ciberseguridad|ciber seguridad|cyber|seguridad informática/)) {
+    return MOCK_RESPONSES.ciberseguridad;
+  }
+
+  if (mensajeLower.match(/inteligencia artificial|ia|machine learning|ml/)) {
+    return MOCK_RESPONSES.ia;
+  }
+
+  // Detectar intención basándose en palabras clave (más general)
   if (mensajeLower.match(/carrera|programa|estudi|técnic|disponible/)) {
     return MOCK_RESPONSES.carreras;
   }
@@ -75,10 +123,6 @@ export function getMockResponse(mensaje: string): MockResponse {
 
   if (mensajeLower.match(/beca|financ|pago|costo|precio|descuento/)) {
     return MOCK_RESPONSES.becas;
-  }
-
-  if (mensajeLower.match(/inteligencia artificial|ia|machine learning|ml/)) {
-    return MOCK_RESPONSES.ia;
   }
 
   if (mensajeLower.match(/horario|contacto|teléfono|email|ubicación|dirección/)) {

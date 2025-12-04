@@ -62,7 +62,9 @@ class TYRSimple:
                 "intencion": metadata.get("intencion", "unknown"),
                 "confianza": float(metadata.get("confianza", 0.0)),
                 "sentimiento": metadata.get("sentimiento", "neutro"),
-                "sentimiento_compound": float(metadata.get("sentimiento_compound", 0.0))
+                "sentimiento_compound": float(metadata.get("sentimiento_compound", 0.0)),
+                "entidades": metadata.get("entidades", {}),
+                "entidades_detalladas": metadata.get("entidades_detalladas", [])
             }
 
         except Exception as e:
