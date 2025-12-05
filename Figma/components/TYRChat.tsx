@@ -19,6 +19,8 @@ interface Message {
   timestamp: Date;
   intencion?: string;
   confianza?: number;
+  sentimiento?: string;
+  sentimiento_compound?: number;
   entidades?: {
     [key: string]: string[];
   };
@@ -359,6 +361,8 @@ export function TYRChat() {
         timestamp: new Date(),
         intencion: data.intencion,
         confianza: data.confianza,
+        sentimiento: data.sentimiento,
+        sentimiento_compound: data.sentimiento_compound,
         entidades: data.entidades,
       };
 
@@ -859,6 +863,53 @@ export function TYRChat() {
                         {((mensaje.confianza || 0) * 100).toFixed(1)}% confianza
                       </span>
                     </div>
+
+                    {/* Sentiment Display */}
+                    {mensaje.sentimiento && (
+                      <div className="mt-3 pt-3 border-t border-[#2E3A4F]/30">
+                        <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-xl">
+                              {mensaje.sentimiento === "positivo" ? "😊" :
+                               mensaje.sentimiento === "negativo" ? "😟" :
+                               mensaje.sentimiento === "neutro" ? "😐" : "🤔"}
+                            </span>
+                            <span className="text-[11px] font-semibold uppercase tracking-wider"
+                                  style={{
+                                    color: mensaje.sentimiento === "positivo" ? "#4ADE80" :
+                                           mensaje.sentimiento === "negativo" ? "#F87171" :
+                                           "#94A3B8"
+                                  }}>
+                              {mensaje.sentimiento === "positivo" ? "Positivo" :
+                               mensaje.sentimiento === "negativo" ? "Negativo" :
+                               mensaje.sentimiento === "neutro" ? "Neutro" :
+                               mensaje.sentimiento}
+                            </span>
+                          </div>
+                          {mensaje.sentimiento_compound !== undefined && (
+                            <>
+                              <span className="text-[#B3B3B3]">•</span>
+                              <div className="flex items-center gap-2">
+                                <div className="w-24 h-1.5 bg-[#1E2533] rounded-full overflow-hidden">
+                                  <div
+                                    className="h-full rounded-full transition-all duration-300"
+                                    style={{
+                                      width: `${Math.abs(mensaje.sentimiento_compound) * 100}%`,
+                                      backgroundColor: mensaje.sentimiento_compound > 0 ? "#4ADE80" :
+                                                      mensaje.sentimiento_compound < 0 ? "#F87171" :
+                                                      "#94A3B8"
+                                    }}
+                                  />
+                                </div>
+                                <span className="text-[10px] text-[#8B96A8] font-medium">
+                                  {mensaje.sentimiento_compound > 0 ? "+" : ""}{mensaje.sentimiento_compound.toFixed(2)}
+                                </span>
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      </div>
+                    )}
 
                     {/* NER Entities Display */}
                     {mensaje.entidades && Object.keys(mensaje.entidades).length > 0 && (

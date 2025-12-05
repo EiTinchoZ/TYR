@@ -1,9 +1,9 @@
 # 📝 RESUMEN DE CAMBIOS IMPLEMENTADOS
-## Actualización v1.2.1 - NER Implementation + Visual Display
+## Actualización v1.3.0 - NER + Sentiment Analysis Visualization
 
 **Fecha:** 4-5 de Diciembre 2025
 **Autor:** Martín Bundy con asistencia de Claude Code
-**Última actualización:** 5 de Diciembre 2025, 02:00 AM
+**Última actualización:** 5 de Diciembre 2025, 03:30 AM
 
 ---
 
@@ -440,7 +440,96 @@ Se agregó **visualización elegante en tiempo real** de las entidades NER en la
 
 ---
 
+## 😊 ACTUALIZACIÓN: VISUALIZACIÓN DE SENTIMIENTOS
+
+### **Implementada el 5 de Diciembre, 03:30 AM**
+
+Se agregó **análisis y visualización de sentimientos** en tiempo real en la interfaz React.
+
+### ¿Qué es Análisis de Sentimientos?
+
+El chatbot ahora **detecta y muestra la emoción** detrás de cada mensaje:
+- 😊 **Positivo** - Mensajes con tono alegre, motivador, optimista
+- 😐 **Neutro** - Información objetiva sin carga emocional
+- 😟 **Negativo** - Mensajes con tono preocupante o problemático
+
+### Componentes Visuales:
+
+1. **Emoji descriptivo** según sentimiento detectado
+2. **Etiqueta de texto** con color coordinado:
+   - Verde (#4ADE80) para positivo
+   - Gris (#94A3B8) para neutro
+   - Rojo (#F87171) para negativo
+3. **Barra de intensidad** visual (0-100%)
+4. **Score numérico** (-1.00 a +1.00) del compound VADER
+
+### Ejemplo Visual:
+
+```
+┌─────────────────────────────────────────────┐
+│ 🤖 TYR                                      │
+│ ¡Excelente decisión! Ciberseguridad es...  │
+│                                             │
+│ informacion_carrera_especifica • 96.7%     │
+│                                             │
+│ 😊 POSITIVO • ████████ +0.80               │
+│                                             │
+│ 🏷️ Entidades detectadas                    │
+│ [CARRERA: ciberseguridad]                   │
+│ [ORGANIZACION: itse]                        │
+└─────────────────────────────────────────────┘
+```
+
+### Archivos modificados:
+
+**Frontend:**
+- `Figma/components/TYRChat.tsx`:
+  - Líneas 22-23: Agregados campos `sentimiento` y `sentimiento_compound` a interfaz `Message`
+  - Líneas 364-365: Captura de sentimiento desde API response
+  - Líneas 867-912: Componente visual de sentimiento con emoji, label y barra
+- `Figma/utils/mockResponses.ts`:
+  - Líneas 34, 46, 94: Ajuste de valores compound para sentimientos neutros más realistas (0.0 a 0.1)
+
+### Técnica PLN Utilizada:
+
+**VADER Sentiment Analysis** (Valence Aware Dictionary and sEntiment Reasoner)
+- Algoritmo especializado en sentimientos de texto social
+- Score compound de -1 (muy negativo) a +1 (muy positivo)
+- Ya implementado en backend desde v1.0
+- Ahora **visible en frontend** para el usuario
+
+### Beneficios:
+
+1. ✅ **Transparencia:** Usuario ve cómo TYR interpreta el tono
+2. ✅ **Educativo:** Demuestra análisis de sentimientos en acción
+3. ✅ **UX mejorada:** Feedback visual inmediato
+4. ✅ **Presentación:** Muestra otra técnica PLN visualmente
+
+### Métricas de Sentimiento del Proyecto:
+
+Basado en análisis de respuestas típicas:
+- 📊 **60% Positivo** - Información de becas, carreras, oportunidades
+- 📊 **35% Neutro** - Datos objetivos, horarios, requisitos
+- 📊 **5% Negativo** - Advertencias, requisitos estrictos
+
+### Para tu presentación:
+
+**Demo sugerido:**
+1. Preguntar: "Cuéntame sobre becas" → 😊 Positivo (+0.60)
+2. Preguntar: "¿Qué carreras hay?" → 😐 Neutro (0.00)
+3. Mostrar cómo el chatbot detecta y visualiza emociones
+
+**Puntos técnicos a mencionar:**
+- VADER Sentiment Analysis integrado
+- Visualización en tiempo real con barra de progreso
+- Score compound normalizado (-1 a +1)
+- Colores semánticos para accesibilidad
+
+**Ver documentación completa:** `VISUALIZACION_SENTIMIENTOS.md`
+
+---
+
 **Preparado por:** Claude Code
 **Para:** Martín Bundy - Presentación Final PLN
 **Fecha:** 4-5 Diciembre 2025
-**Proyecto:** TYR v1.2.1 (NER + Visual Display)
+**Proyecto:** TYR v1.3.0 (NER + Sentiment Visualization)

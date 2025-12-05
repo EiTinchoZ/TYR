@@ -31,7 +31,7 @@ const MOCK_RESPONSES: Record<string, MockResponse> = {
     intencion: "informacion_carreras",
     confianza: 0.98,
     sentimiento: "neutro",
-    sentimiento_compound: 0.5,
+    sentimiento_compound: 0.0,
     entidades: {
       "ORGANIZACION": ["itse"],
       "PERIODO": ["2-3 años"]
@@ -43,7 +43,7 @@ const MOCK_RESPONSES: Record<string, MockResponse> = {
     intencion: "proceso_admision",
     confianza: 0.96,
     sentimiento: "neutro",
-    sentimiento_compound: 0.3,
+    sentimiento_compound: 0.1,
     entidades: {
       "ORGANIZACION": ["itse"],
       "REQUISITO": ["cédula", "diploma", "fotos"]
@@ -91,7 +91,7 @@ const MOCK_RESPONSES: Record<string, MockResponse> = {
     intencion: "horarios_contacto",
     confianza: 0.94,
     sentimiento: "neutro",
-    sentimiento_compound: 0.4,
+    sentimiento_compound: 0.05,
     entidades: {
       "ORGANIZACION": ["itse"],
       "UBICACION": ["tocumen", "panamá"],
