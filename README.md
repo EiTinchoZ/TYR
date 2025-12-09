@@ -5,7 +5,7 @@
 [![React](https://img.shields.io/badge/React-18.3-61DAFB.svg?logo=react)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6.svg?logo=typescript)](https://www.typescriptlang.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688.svg?logo=fastapi)](https://fastapi.tiangolo.com/)
-[![Tests](https://img.shields.io/badge/Tests-59%20passing-brightgreen.svg)](tests/)
+[![Tests](https://img.shields.io/badge/Tests-80%20passing-brightgreen.svg)](tests/)
 [![Coverage](https://img.shields.io/badge/Coverage-91%25-green.svg)](tests/)
 [![Accuracy](https://img.shields.io/badge/Accuracy-98.93%25-success.svg)](#model-metrics)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -30,7 +30,8 @@ TYR combines state-of-the-art Natural Language Processing with a modern web inte
 - **Progressive Web App**: Installable on Android and iOS devices with offline support
 - **Professional UI/UX**: Modern landing page with integrated chat modal, responsive design, and smooth animations
 - **Advanced NLP**: BERT-based intent classification with VADER sentiment analysis and custom NER (Named Entity Recognition)
-- **Entity Extraction**: Recognizes 6 types of entities (careers, services, organizations, locations, requirements, time periods)
+- **Entity Extraction**: Recognizes 6 types of entities (careers, services, organizations, locations, requirements, time periods) with ~95% precision
+- **Real-time Visualization**: Visual display of detected sentiment (😊😐😟) and color-coded entity recognition
 - **Comprehensive knowledge base**: Complete information about ITSE's programs, services, and procedures
 
 The assistant handles 9 different intent categories and provides specific responses for 16 technical programs, special services (CAIPI daycare, CIIECYT research center), international recognizations, and institutional partnerships.
